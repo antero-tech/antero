@@ -1,7 +1,11 @@
 {
+  "fullScreen": {
+    "enable": false
+  },
   "particles": {
+    
     "number": {
-      "value": 60,
+      "value": 80,
       "density": {
         "enable": true,
         "value_area": 800
@@ -11,10 +15,15 @@
       "value": "white"
     },
     "shape": {
-      "type": "triangle",
+      "type": "circle",
       "stroke": {
         "width": 4,
-        "color": "#FFFFFF"
+        "color": "#FFFFFF",
+        "shadow": {
+          "enable": true,
+          "color": "#FFFFFF",
+          "blur": 5
+        }
       },
       "polygon": {
         "nb_sides": 5
@@ -46,7 +55,7 @@
       }
     },
     "line_linked": {
-      "enable": true,
+      "enable": false,
       "distance": 150,
       "color": "#000000",
       "opacity": 0.4,
@@ -54,7 +63,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 1,
+      "speed": 0.5,
       "direction": "none",
       "random": false,
       "straight": false,
