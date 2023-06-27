@@ -17,3 +17,7 @@
 #navbar > ul > li {
   margin-right: 20px;
 }
+#footer {
+  background-color: pink;
+  width: 100vw;
+}
