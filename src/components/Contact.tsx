@@ -1,7 +1,16 @@
 const Contact = () => {
   return (
     <div id='contact'>
-      <h2>Contact here</h2>
+      <div id='contact-blurb'>
+        <h2>Get in contact.</h2>
+        <p>
+          Our team would love to hear about your project and how we can help.
+          Let's get started!
+        </p>
+      </div>
+      <form>
+        <input type='text' />
+      </form>
     </div>
   );
 };
