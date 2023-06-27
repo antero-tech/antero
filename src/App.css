@@ -41,7 +41,7 @@ footer {
   width: 100vw;
 }
 
-/* CONTACT */
+/* === CONTACT === */
 #contact {
   background-color: white;
   border: 2px solid black;
@@ -68,4 +68,16 @@ footer {
 }
 #contact-submit-button {
   width: fit-content;
+}
+
+/* === OUR WORK === */
+#our-work {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
