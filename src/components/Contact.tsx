@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    console.log('e.target: ', e.target);
+    // console.log('e.target: ', e.target);
     const { name, value } = e.target;
     setFormValues((prev) => {
       return { ...prev, [name]: value };
@@ -24,9 +24,10 @@ const Contact: React.FC = () => {
   };
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log('formValues: ', formValues);
+    // console.log('formValues: ', formValues);
     const { name, email, description } = formValues;
     if (name && email && description) {
+      const message = `Name: ${name}\nEmail: ${email}\nDescription: ${description}`;
       //server side send an email
       //TO DO: DO THIS
       console.log('sending email');
