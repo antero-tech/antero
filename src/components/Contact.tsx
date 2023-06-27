@@ -65,8 +65,7 @@ const Contact: React.FC = () => {
         <label htmlFor='description'>
           Tell us a little bit about your project...
         </label>
-        <input
-          type='text'
+        <textarea
           id='description'
           name='description'
           onChange={handleChange}
