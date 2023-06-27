@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div id='navbar'>
+    <header id='navbar'>
       <h1>Netron Solutions</h1>
       <ul>
         <li>
@@ -16,7 +16,7 @@ const Navbar = () => {
           <a href='#contact-us'>contact us</a>
         </li>
       </ul>
-    </div>
+    </header>
   );
 };
 export default Navbar;

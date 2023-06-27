@@ -9,11 +9,16 @@ import OurWork from './components/OurWork';
 function App() {
   return (
     <>
+      {/* header */}
       <Navbar />
-      <Hero />
-      <AboutUs />
-      <OurWork />
-      <Contact />
+      {/* main */}
+      <main>
+        <Hero />
+        <AboutUs />
+        <OurWork />
+        <Contact />
+      </main>
+      {/* footer */}
       <Footer />
     </>
   );
