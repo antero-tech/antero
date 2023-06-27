@@ -1,7 +1,41 @@
+import React, { useCallback } from 'react';
+// Particles imports
+import Particles from 'react-particles';
+import { loadFull } from 'tsparticles';
+import { Engine } from 'tsparticles-engine';
+import loginParticles from '../assets/login-particles.json';
+import { loadFirePreset } from "tsparticles-preset-fire";
+
 const Hero = () => {
+  
+    // Initialze background particles
+    // const particlesInit = useCallback(async (engine: Engine): Promise<void> => {
+    //   await loadFull(engine);
+    // }, []);
+
+    const fireInit = useCallback(async (engine: Engine): Promise<void> => {
+      await loadFirePreset(engine);
+    }, []);
+    const fireOptions: any = {
+      preset: "fire",
+      fullScreen: {
+        enable: false,
+      },
+      particles: {
+        move: {
+          enable: true,
+          speed: 0.5,
+        },
+      }
+    }
+  
+    //const particleOptions: any = loginParticles;
   return (
     <div id='hero'>
-      <h2>hero here</h2>
+      <Particles id='particles' options={fireOptions} init={fireInit} />
+      <div id="hero-text">
+        <h1>Brutally Simple, Dynamic Digital Solutions</h1>
+      </div>
     </div>
   );
 };

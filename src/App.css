@@ -38,6 +38,29 @@ main {
   flex: 1 0 auto;
   /* width: 100%; */
 }
+#hero {
+  margin-top: 100px;
+  background-color: transparent;
+  position: relative;
+  
+}
+#particles {
+  position: absolute;
+ 
+}
+#hero-text {
+  color: rgb(246, 245, 244);
+  padding: 1rem;
+  background-color: transparent;
+  position: absolute;
+  margin-left: 2.3rem;
+  
+}
+#hero-text > h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
 footer {
   flex-shrink: 0;
   background-color: pink;

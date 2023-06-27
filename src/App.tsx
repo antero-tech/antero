@@ -7,8 +7,10 @@ import Navbar from './components/Navbar';
 import OurWork from './components/OurWork';
 
 function App() {
+
   return (
     <>
+      
       {/* header */}
       <Navbar />
       {/* main */}
