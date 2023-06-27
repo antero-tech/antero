@@ -1,5 +1,7 @@
 #root {
   max-width: 1280px;
+  /* this is just here to move the hero to a visible position, it will need to change when layout gets more finalized */
+  margin-top: 100px;
 }
 #navbar {
   display: flex;
@@ -14,4 +16,8 @@
 }
 #navbar > ul > li {
   margin-right: 20px;
+}
+
+#hero {
+  background-color: red;
 }
