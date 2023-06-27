@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
 #root {
   box-sizing: border-box;
+  margin: auto;
   max-width: 1280px;
   min-height: 100vh;
   /* this is just here to move the hero to a visible position, it will need to change when layout gets more finalized */
@@ -10,6 +14,7 @@
   align-items: center;
 
   background-color: antiquewhite;
+  padding: 2rem;
 }
 
 #navbar {
@@ -28,9 +33,39 @@
 }
 main {
   flex: 1 0 auto;
+  /* width: 100%; */
 }
 footer {
   flex-shrink: 0;
   background-color: pink;
   width: 100vw;
+}
+
+/* CONTACT */
+#contact {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  padding: 2rem;
+}
+#contact-blurb {
+  text-align: center;
+  width: 50%;
+  padding: 1rem;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  width: 50%;
+  padding: 1rem;
+}
+#contact-submit-button {
+  width: fit-content;
 }
