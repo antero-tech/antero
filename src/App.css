@@ -52,6 +52,17 @@ footer {
 }
 #contact-blurb {
   text-align: center;
-  background-color: pink;
-  max-width: 50%;
+  /* background-color: pink; */
+  width: 50%;
+  padding: 1rem;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 50%;
+  padding: 1rem;
+}
+#contact-submit-button {
+  width: fit-content;
 }
