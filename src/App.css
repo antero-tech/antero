@@ -6,8 +6,6 @@
   margin: auto;
   max-width: 1280px;
   min-height: 100vh;
-  /* this is just here to move the hero to a visible position, it will need to change when layout gets more finalized */
-  padding-top: 100px;
 
   display: flex;
   flex-direction: column;
@@ -41,7 +39,7 @@ footer {
   width: 100vw;
 }
 
-/* CONTACT */
+/* === CONTACT === */
 #contact {
   background-color: white;
   border: 2px solid black;
@@ -68,4 +66,38 @@ footer {
 }
 #contact-submit-button {
   width: fit-content;
+}
+
+/* === OUR WORK === */
+#our-work {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/*  === CARD === */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.card {
+  background-color: antiquewhite;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  /* width: 100%; */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.card > img {
+  max-width: 100%;
 }
