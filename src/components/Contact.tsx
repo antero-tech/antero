@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
       return { ...prev, [name]: value };
     });
   };
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // console.log('formValues: ', formValues);
     const { name, email, description } = formValues;
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
       //TO DO: DO THIS
       console.log('sending email');
     }
-  }
+  };
 
   return (
     <div id='contact'>
