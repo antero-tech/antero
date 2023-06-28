@@ -19,7 +19,7 @@ const Hero = () => {
     const fireOptions: any = {
       preset: "fire",
       fullScreen: {
-        enable: false,
+        enable: true,
       },
       particles: {
         move: {
@@ -35,6 +35,7 @@ const Hero = () => {
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <div id="hero-text">
         <h1>Brutally Simple, Dynamic Digital Solutions</h1>
+        <h2></h2>
       </div>
     </div>
   );
