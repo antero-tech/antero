@@ -2,8 +2,13 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: 'Bebas Neue', sans-serif;
   /* font-family: 'Open Sans', sans-serif; */
+
+  --light-font: rgb(246, 245, 244);
+  --dark-font: rgb(0, 0, 0);
 }
 
 #root {
@@ -11,49 +16,66 @@
   margin: auto;
   max-width: 1280px;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* background-color: antiquewhite; */
-  padding: 2rem;
 }
+
+/* === NAVBAR === */
 
 #navbar {
   display: flex;
-  background-color: pink;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
+  color: var(--light-font);
+  padding: 1rem;
 }
-#navbar > ul {
+
+/* Navbar logo section */
+#navbar-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+/* Navbar links section */
+#navbar-links {
   display: flex;
 }
-#navbar > ul > li {
-  margin-right: 20px;
+#navbar-links > li {
+  list-style: none;
+  background-color: red;
 }
+#navbar-links > li > a {
+  text-decoration: none;
+
+  color: inherit;
+  /* margin-right: 20px; */
+}
+
 main {
   flex: 1 0 auto;
   /* width: 100%; */
 }
+
+/* === HERO === */
+
 #hero {
   margin-top: 200px;
-  
-  /* background-color: transparent; */
-  /* position: relative; */
-  
 }
 #particles {
   position: absolute;
   z-index: -1;
- 
 }
 #hero-text {
-  color: rgb(246, 245, 244);
+  color: var(--light-font);
   padding: 1rem;
-  
 }
 #hero-text > h1 {
   font-size: 3rem;
@@ -67,6 +89,7 @@ footer {
 }
 
 /* === CONTACT === */
+
 #contact {
   background-color: white;
   border: 2px solid black;
@@ -135,7 +158,7 @@ footer {
   /* width: 55%; */
   min-width: 300px;
   padding: 2rem;
-  
+
   color: rgb(246, 245, 244);
 }
 @media screen and (min-width: 768px) {
