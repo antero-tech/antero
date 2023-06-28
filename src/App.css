@@ -27,13 +27,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: green;
+  /* background-color: green; */
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   color: var(--light-font);
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* Navbar logo section */
@@ -46,17 +46,27 @@
 
 /* Navbar links section */
 #navbar-links {
+  font-size: 1.4rem;
   display: flex;
+  padding: 1rem;
+  align-self: flex-start;
+  /* background-color: rebeccapurple; */
+  /* font-family: 'Open Sans', sans-serif; */
 }
 #navbar-links > li {
   list-style: none;
-  background-color: red;
+  padding: 0.5rem;
+  /* background-color: red; */
+  border-radius: 20px;
+}
+#navbar-links > li:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  /* border-radius: 10px; */
 }
 #navbar-links > li > a {
   text-decoration: none;
-
   color: inherit;
-  /* margin-right: 20px; */
+  margin: 0 1rem;
 }
 
 main {
