@@ -1,8 +1,12 @@
 const Navbar = () => {
   return (
     <header id='navbar'>
-      <h1>Netron Solutions</h1>
-      <ul>
+      <div id='navbar-logo-container'>
+        {/* TO DO: add logo when available */}
+        {/* <img src='' id='navbar-logo' /> */}
+        <h1>Netron Solutions</h1>
+      </div>
+      <ul id='navbar-links'>
         <li>
           <a href='#home'>home</a>
         </li>
