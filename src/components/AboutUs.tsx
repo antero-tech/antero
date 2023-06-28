@@ -2,8 +2,8 @@ const AboutUs = () => {
   return (
     <div id='about-us'>
       <h2>
-        With over a decade of experience in the game, we delivering striking
-        frontend design and engineering with a commitment to lasting value.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </h2>
     </div>
   );
