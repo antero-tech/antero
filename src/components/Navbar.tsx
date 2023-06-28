@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <header id='navbar'>
       <div id='navbar-logo-container'>
@@ -7,9 +7,6 @@ const Navbar = () => {
         <h1>Netron Solutions</h1>
       </div>
       <ul id='navbar-links'>
-        <li>
-          <a href='#home'>home</a>
-        </li>
         <li>
           <a href='#about-us'>about us</a>
         </li>
