@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet } from '@tanstack/router';
+import { Outlet, Link } from '@tanstack/router';
 
 const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
@@ -34,17 +34,22 @@ const Navbar: React.FC = () => {
         <div id='navbar-logo-container'>
           {/* TO DO: add logo when available */}
           {/* <img src='' id='navbar-logo' /> */}
-          <h1>Netron Solutions</h1>
+          <Link to='/'>
+            <h1>Netron Solutions</h1>
+          </Link>
         </div>
         <ul id='navbar-links'>
           <li>
-            <a href='#about-us'>about us</a>
+            <Link to='/'>about us</Link>
+            {/* <a href='#about-us'>about us</a> */}
           </li>
           <li>
-            <a href='#our-work'>our work</a>
+            <Link to='/our-work'>our work</Link>
+            {/* <a href='#our-work'>our work</a> */}
           </li>
           <li>
-            <a href='#contact-us'>contact us</a>
+            <Link to='/contact-us'>contact-us</Link>
+            {/* <a href='#contact-us'>contact us</a> */}
           </li>
         </ul>
       </header>
