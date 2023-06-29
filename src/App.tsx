@@ -1,8 +1,8 @@
 import './App.css';
-import HomePage from './pages/HomePage';
-import ContactPage from './pages/ContactPage';
-import OurWorkPage from './pages/OurWorkPage';
-
+import HomePage from './pages/homePage/HomePage';
+import ContactPage from './pages/contactPage/ContactPage';
+import OurWorkPage from './pages/ourWorkPage/OurWorkPage';
+import workData from './assets/work-cards-data.json';
 import Navbar from './components/Navbar';
 import { RouterProvider, Router, Route, RootRoute } from '@tanstack/router';
 
@@ -20,7 +20,7 @@ const indexRoute = new Route({
 const ourWorkRoute = new Route({
   getParentRoute: () => rootRoute,
   path: 'our-work',
-  component: OurWorkPage,
+  component: () => <OurWorkPage workData={workData} />,
 });
 const contactUsRoute = new Route({
   getParentRoute: () => rootRoute,
