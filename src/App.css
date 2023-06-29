@@ -45,6 +45,13 @@
   align-items: center;
   font-size: 1.2rem;
 }
+/* remove styles from links in navbar logo container */
+
+#navbar-logo-container > a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 1rem;
+}
 
 /* Navbar links section */
 #navbar-links {
