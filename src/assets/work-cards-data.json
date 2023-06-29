@@ -1,0 +1,22 @@
+[
+  {
+    "title": "example1",
+    "imgSrc": "https://picsum.photos/200/300",
+    "imgAlt": "summer"
+  },
+  {
+    "title": "example2",
+    "imgSrc": "https://picsum.photos/200/300",
+    "imgAlt": "summer"
+  },
+  {
+    "title": "example3",
+    "imgSrc": "https://picsum.photos/200/300",
+    "imgAlt": "summer"
+  },
+  {
+    "title": "example4",
+    "imgSrc": "https://picsum.photos/200/300",
+    "imgAlt": "summer"
+  }
+]
