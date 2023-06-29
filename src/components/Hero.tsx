@@ -34,8 +34,16 @@ const Hero = () => {
     <div id='hero'>
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <div id="hero-text">
-        <h1>Brutally Simple, Dynamic Digital Solutions</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h1>Brutally Simple</h1>
+        <h1>Dynamic Digital Solutions</h1>
         <h2></h2>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     </div>
   );
