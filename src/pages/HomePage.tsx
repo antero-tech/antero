@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 
 import OurWork from '../components/OurWork';
+import workData from '../assets/work-cards-data.json';
 
 const HomePage = () => {
   return (
@@ -11,7 +12,7 @@ const HomePage = () => {
       <main>
         <Hero />
         <AboutUs />
-        <OurWork />
+        <OurWork workData={workData} />
         <Contact />
       </main>
       <Footer />
