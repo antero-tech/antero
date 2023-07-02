@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 // Particles imports
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
