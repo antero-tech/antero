@@ -3,7 +3,7 @@ import HomePage from './pages/homePage/HomePage';
 import ContactPage from './pages/contactPage/ContactPage';
 import OurWorkPage from './pages/ourWorkPage/OurWorkPage';
 import workData from './assets/work-cards-data.json';
-import Navbar from './components/Navbar';
+import Navbar from './sharedComponents/Navbar';
 import { RouterProvider, Router, Route, RootRoute } from '@tanstack/router';
 
 //defines root route and creates outlet for children to be render within

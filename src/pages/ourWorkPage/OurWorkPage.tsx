@@ -1,4 +1,4 @@
-import Card from '../../components/Card';
+import Card from '../../sharedComponents/Card';
 
 interface OurWorkProps {
   workData: {
