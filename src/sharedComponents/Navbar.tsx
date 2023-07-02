@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Outlet, Link } from '@tanstack/router';
+import Footer from './Footer';
 
 const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
@@ -41,19 +42,17 @@ const Navbar: React.FC = () => {
         <ul id='navbar-links'>
           <li>
             <Link to='/'>about us</Link>
-            {/* <a href='#about-us'>about us</a> */}
           </li>
           <li>
             <Link to='/our-work'>our work</Link>
-            {/* <a href='#our-work'>our work</a> */}
           </li>
           <li>
             <Link to='/contact-us'>contact-us</Link>
-            {/* <a href='#contact-us'>contact us</a> */}
           </li>
         </ul>
       </header>
       <Outlet />
+      <Footer />
     </>
   );
 };

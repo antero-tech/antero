@@ -1,9 +1,9 @@
 //define component
 const OurWorkPageHero: React.FC = () => {
   return (
-    <div id='work-hero'>
-      <h1>hey there</h1>
-    </div>
+    <section id='work-hero'>
+      <h1>Our work Lorem Ipsum</h1>
+    </section>
   );
 };
 

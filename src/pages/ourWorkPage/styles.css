@@ -1,0 +1,12 @@
+/* === Our Work Page === */
+
+#work-hero {
+  margin: 0;
+  background-color: red;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
