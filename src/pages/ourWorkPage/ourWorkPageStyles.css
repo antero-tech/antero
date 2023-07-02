@@ -1,0 +1,9 @@
+/* === Our Work Page === */
+
+#work-hero {
+  /* margin-top: 200px; */
+  background-color: red;
+  width: 100vw;
+  height: 90vh;
+  color: purple;
+}
