@@ -1,6 +1,6 @@
 import Card from '../../sharedComponents/Card';
 import OurWorkPageHero from './components/OurWorkPageHero';
-import './OurWorkPageStyles.css';
+import './styles.css';
 
 interface OurWorkPageProps {
   workData: {
