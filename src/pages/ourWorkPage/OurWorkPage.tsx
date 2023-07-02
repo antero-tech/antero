@@ -20,11 +20,10 @@ const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
     />
   ));
   return (
-    <div id='our-work-page'>
+    <main id='our-work-page' className='pages'>
       <OurWorkPageHero />
-      <div id='our-work-hero'>Our Work Hero goes here</div>
       <div className='card-container'>{workCards}</div>
-    </div>
+    </main>
   );
 };
 

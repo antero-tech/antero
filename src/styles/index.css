@@ -14,15 +14,11 @@
   font-family: 'Bebas Neue', sans-serif;
   /* font-family: 'Open Sans', sans-serif; */
 }
-
-/* #root {
+.pages {
+  /* flex: 1 0 auto; */
   max-width: 1280px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
+  margin: 0 auto;
+}
 /* === NAVBAR === */
 
 #navbar {
@@ -33,6 +29,7 @@
   top: 0;
   left: 0;
   width: 100vw;
+  max-height: 100px;
   color: var(--light-font);
   padding: 1rem 0.5rem;
   transition: background-color 0.2s ease-in-out;
