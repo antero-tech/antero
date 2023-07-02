@@ -12,26 +12,26 @@ const Hero = () => {
   //   await loadFull(engine);
   // }, []);
 
-  const fireInit = useCallback(async (engine: Engine): Promise<void> => {
-    await loadFirePreset(engine);
-  }, []);
-  const fireOptions: any = {
-    preset: 'fire',
-    fullScreen: {
-      enable: true,
-    },
-    particles: {
-      move: {
-        enable: true,
-        speed: 0.5,
-      },
-    },
-  };
+  // const fireInit = useCallback(async (engine: Engine): Promise<void> => {
+  //   await loadFirePreset(engine);
+  // }, []);
+  // const fireOptions: any = {
+  //   preset: 'fire',
+  //   fullScreen: {
+  //     enable: true,
+  //   },
+  //   particles: {
+  //     move: {
+  //       enable: true,
+  //       speed: 0.5,
+  //     },
+  //   },
+  // };
 
   //const particleOptions: any = loginParticles;
   return (
     <div id='hero'>
-      <Particles id='particles' options={fireOptions} init={fireInit} />
+      {/* <Particles id='particles' options={fireOptions} init={fireInit} /> */}
       <div id='hero-text'>
         <h1>Brutally Simple</h1>
         <h1>Dynamic Digital Solutions</h1>

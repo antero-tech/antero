@@ -9,10 +9,7 @@
   flex-direction: column;
   justify-content: center;
 }
-#particles {
-  position: absolute;
-  z-index: -1;
-}
+
 #hero-text {
   color: var(--light-font);
   padding: 1rem;
