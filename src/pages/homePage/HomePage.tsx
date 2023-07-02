@@ -6,10 +6,9 @@ import OurWork from './components/OurWork';
 import workData from '../../assets/work-cards-data.json';
 
 import './styles.css';
-
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
-    <main id='home-page-container'>
+    <main id='home-page-container' className='pages'>
       <Hero />
       <AboutUs />
       <OurWork workData={workData} />
