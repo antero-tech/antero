@@ -1,7 +1,239 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  font-family: 'Bebas Neue', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+
+  --light-font: rgb(246, 245, 244);
+  --dark-font: rgb(0, 0, 0);
+
+  --nav-background: rgb(246, 245, 244);
+}
+
+#root {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === NAVBAR === */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  color: var(--light-font);
+  padding: 1rem 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Navbar logo section */
+#navbar-logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2rem;
+}
+/* remove styles from links in navbar logo container */
+
+#navbar-logo-container > a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0 1rem;
+}
+
+/* Navbar links section */
+#navbar-links {
+  font-size: 1.4rem;
+  display: flex;
+  align-self: flex-start;
+}
+
+/* #navbar-links > li:last-child {
+  background-color: red;
+} */
+
+#navbar-links > li {
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#navbar-links > li:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+#navbar-links > li > a {
+  /* font-family: 'Open Sans', sans-serif; */
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  margin: 0 1rem;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* === HERO === */
+
+#hero {
+  margin-top: 200px;
+}
+#particles {
+  position: absolute;
+  z-index: -1;
+}
+#hero-text {
+  color: var(--light-font);
+  padding: 1rem;
+}
+#hero-text > h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-align: center;
+}
+#hero-text h1 {
+  font-size: 4rem;
+}
+/* === ABOUT US === */
+#about-us {
+  text-align: center;
+  /* width: 55%; */
+  min-width: 300px;
+  padding: 2rem;
+
+  color: rgb(246, 245, 244);
+}
+@media screen and (min-width: 768px) {
+  #about-us > h2 {
+    font-size: 2.4rem;
+  }
+}
+#about-us h2 {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+#details-container {
+}
+.detail-wrapper {
+  margin-top: 2rem;
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 30px;
+  margin-top: 30px;
+  padding: 30px;
+}
+.detail-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+#about-user {
+  flex-direction: row;
+}
+.detail-img img {
+  border: 2px solid rgba(128, 128, 128, 0.753);
+  border-radius: 30px;
+}
+.detail-copy {
+  padding: 30px;
+  text-align: justify;
+  font-size: 1.2em;
+}
+#detail-title {
+  font-size: 2rem;
+}
+.detail-copy p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+/* === CONTACT === */
+
+#contact {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  padding: 2rem;
+}
+#contact-blurb {
+  text-align: center;
+  width: 50%;
+  padding: 1rem;
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  width: 50%;
+  padding: 1rem;
+}
+#contact-submit-button {
+  width: fit-content;
+}
+
+/* === OUR WORK === */
+#our-work {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/*  === CARD === */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.card {
+  background-color: antiquewhite;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  /* width: 100%; */
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.card > img {
+  max-width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: pink;
+  width: 100vw;
 }
