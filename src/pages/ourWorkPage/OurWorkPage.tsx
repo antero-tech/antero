@@ -1,6 +1,8 @@
 import Card from '../../sharedComponents/Card';
+import OurWorkPageHero from './components/OurWorkPageHero';
+import './OurWorkPageStyles.css';
 
-interface OurWorkProps {
+interface OurWorkPageProps {
   workData: {
     title: string;
     imgSrc: string;
@@ -8,7 +10,7 @@ interface OurWorkProps {
   }[];
 }
 
-const OurWorkPage: React.FC<OurWorkProps> = ({ workData }) => {
+const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
   const workCards = workData.map((work) => (
     <Card
       key={work.title}
@@ -19,6 +21,7 @@ const OurWorkPage: React.FC<OurWorkProps> = ({ workData }) => {
   ));
   return (
     <div id='our-work-page'>
+      <OurWorkPageHero />
       <div id='our-work-hero'>Our Work Hero goes here</div>
       <div className='card-container'>{workCards}</div>
     </div>
