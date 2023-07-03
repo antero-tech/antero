@@ -17,12 +17,13 @@ const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
       title={work.title}
       imgSrc={work.imgSrc}
       imgAlt={work.imgAlt}
+      classPrefix='our-work-page'
     />
   ));
   return (
     <main id='our-work-page' className='pages'>
       <OurWorkPageHero />
-      <div className='card-container'>{workCards}</div>
+      <div id='our-work-page-cards-container'>{workCards}</div>
     </main>
   );
 };
