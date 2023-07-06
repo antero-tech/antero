@@ -1,4 +1,4 @@
-import Card from '../../../sharedComponents/Card';
+import WorkCard from '../../ourWorkPage/components/WorkCard';
 import { Link } from '@tanstack/router';
 
 interface OurWorkProps {
@@ -6,6 +6,7 @@ interface OurWorkProps {
     title: string;
     imgSrc: string;
     imgAlt: string;
+    description: string;
   }[];
 }
 
@@ -13,12 +14,12 @@ const OurWork: React.FC<OurWorkProps> = ({ workData }) => {
   const workCards = workData
     .slice(0, 2)
     .map((work) => (
-      <Card
+      <WorkCard
         key={work.title}
         title={work.title}
         imgSrc={work.imgSrc}
         imgAlt={work.imgAlt}
-        classPrefix='our-work'
+        description={work.description}
       />
     ));
   
