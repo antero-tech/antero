@@ -1,22 +1,26 @@
 [
   {
-    "title": "example1",
-    "imgSrc": "https://picsum.photos/200/300",
+    "title": "Friendify",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, nec al",
+    "imgSrc": "https://picsum.photos/500/900",
     "imgAlt": "summer"
   },
   {
-    "title": "example2",
-    "imgSrc": "https://picsum.photos/200/300",
+    "title": "Sleep Tracker",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, nec al",
+    "imgSrc": "https://picsum.photos/500/600",
     "imgAlt": "summer"
   },
   {
-    "title": "example3",
-    "imgSrc": "https://picsum.photos/200/300",
+    "title": "Juno Surf",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, nec al",
+    "imgSrc": "https://picsum.photos/500/600",
     "imgAlt": "summer"
   },
   {
-    "title": "example4",
-    "imgSrc": "https://picsum.photos/200/300",
+    "title": "Next Project",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl eget ultricies ultricies, nunc nisl aliquam nunc, nec al",
+    "imgSrc": "https://picsum.photos/500/600",
     "imgAlt": "summer"
   }
 ]
