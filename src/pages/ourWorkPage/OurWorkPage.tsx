@@ -1,5 +1,5 @@
 import OurWorkPageHero from './components/OurWorkPageHero';
-import WorkCard from './components/workCard';
+import WorkCard from './components/WorkCard';
 import './styles.scss';
 
 interface OurWorkPageProps {
@@ -25,8 +25,10 @@ const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
     <main id='our-work-page' className='pages'>
       <OurWorkPageHero />
       <section id='our-work-container'>
-        <h1>Our Work</h1>
-        <div className='cards'>{workCards}</div>
+        <div className='contents'>
+          <h1>Our Work</h1>
+          <div className='cards'>{workCards}</div>
+        </div>
       </section>
     </main>
   );
