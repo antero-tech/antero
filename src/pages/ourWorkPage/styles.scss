@@ -1,0 +1,58 @@
+/* === Our Work Page === */
+#our-work-page {
+  /* hero */
+  .heros {
+    height: 50vh;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  /* cards */
+  #our-work-container {
+    h1 {
+      font-size: 4rem;
+      margin-left: 3rem;
+    }
+    color: var(--light-font);
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .work-card {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        .card-img {
+          width: 600px;
+          height: 600px;
+          overflow: hidden;
+          border-radius: 20px;
+          margin-bottom: 1rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        &:hover {
+          .card-img img {
+            transform: scale(1.1);
+            transition: all 0.5s ease-in-out;
+          }
+        }
+        .card-text {
+          h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

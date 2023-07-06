@@ -1,10 +1,11 @@
-import Card from '../../sharedComponents/Card';
 import OurWorkPageHero from './components/OurWorkPageHero';
-import './styles.css';
+import WorkCard from './components/workCard';
+import './styles.scss';
 
 interface OurWorkPageProps {
   workData: {
     title: string;
+    description: string;
     imgSrc: string;
     imgAlt: string;
   }[];
@@ -12,18 +13,21 @@ interface OurWorkPageProps {
 
 const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
   const workCards = workData.map((work) => (
-    <Card
+    <WorkCard
       key={work.title}
       title={work.title}
+      description={work.description}
       imgSrc={work.imgSrc}
       imgAlt={work.imgAlt}
-      classPrefix='our-work-page'
     />
   ));
   return (
     <main id='our-work-page' className='pages'>
       <OurWorkPageHero />
-      <div id='our-work-page-cards-container'>{workCards}</div>
+      <section id='our-work-container'>
+        <h1>Our Work</h1>
+        <div className='cards'>{workCards}</div>
+      </section>
     </main>
   );
 };
