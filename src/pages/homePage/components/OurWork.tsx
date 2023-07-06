@@ -17,6 +17,7 @@ const OurWork: React.FC<OurWorkProps> = ({ workData }) => {
         title={work.title}
         imgSrc={work.imgSrc}
         imgAlt={work.imgAlt}
+        classPrefix='our-work'
       />
     ));
   return (

@@ -15,10 +15,24 @@
   /* font-family: 'Open Sans', sans-serif; */
 }
 .pages {
-  /* flex: 1 0 auto; */
+  flex: 1 0 auto;
   max-width: 1280px;
   margin: 0 auto;
 }
+.heros {
+  padding-top: 100px;
+  color: var(--light-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#particles {
+  position: absolute;
+  z-index: -1;
+}
+
 /* === NAVBAR === */
 
 #navbar {

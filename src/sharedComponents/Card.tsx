@@ -2,11 +2,12 @@ interface CardProps {
   title: string;
   imgSrc: string;
   imgAlt: string;
+  classPrefix: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, imgSrc, imgAlt }) => {
+const Card: React.FC<CardProps> = ({ title, imgSrc, imgAlt, classPrefix }) => {
   return (
-    <div className='card'>
+    <div className={`${classPrefix}-cards`}>
       <div className='card-img'>
         <img src={imgSrc} alt={imgAlt} />
       </div>

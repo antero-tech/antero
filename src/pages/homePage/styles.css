@@ -1,18 +1,10 @@
 /* #home-page-container {} */
 /* === HERO === */
 
-#hero {
-  padding-top: 100px;
-  /* background-color: purple; */
+#home-page-hero {
   min-height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-#particles {
-  position: absolute;
-  z-index: -1;
-}
+
 #hero-text {
   color: var(--light-font);
   padding: 1rem;
