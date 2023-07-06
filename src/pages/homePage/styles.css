@@ -23,8 +23,8 @@
   /* width: 55%; */
   min-width: 300px;
   padding: 2rem;
-
-  color: rgb(246, 245, 244);
+  /* border: 2px solid red; */
+  color: var(--light-font);
 }
 @media screen and (min-width: 768px) {
   #about-us > h2 {
@@ -71,22 +71,70 @@
   font-size: 1em;
 }
 
-/* === CONTACT === */
+/* === OUR WORK === */
+#our-work {
+  padding: 30px;
+}
+#our-work-wrapper {
+  background-color: rgba(128, 128, 128, 0.3);
+  /* border: 2px solid black; */
+  border-radius: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: var(--light-font);
+  font-size: 1.5rem;
+}
 
+img {
+  border: 2px solid rgba(128, 128, 128, 0.753);
+  border-radius: 30px;
+}
+
+.card-container {
+  margin-top: 1rem;
+}
+.our-work-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.see-more {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  background-color: rgba(128, 128, 128, 0.753);
+  padding: .5rem 1rem;
+  border-radius: 7px;
+  text-decoration: none;
+  color: var(--light-font)
+
+}
+.see-more:hover {
+  color: var(--dark-font)
+}
+
+/* === CONTACT === */
 #contact {
-  background-color: white;
+  background-color: rgba(128, 128, 128, 0.3);
   border: 2px solid black;
   border-radius: 10px;
   width: 100%;
+  min-width: 300px;
   display: flex;
   /* flex-direction: column; */
   align-items: center;
   padding: 2rem;
+  margin-top: 30px;
+  
 }
 #contact-blurb {
   text-align: center;
   width: 50%;
   padding: 1rem;
+  color: var(--light-font);
 }
 #contact-form {
   display: flex;
@@ -99,18 +147,6 @@
 }
 #contact-submit-button {
   width: fit-content;
-}
-
-/* === OUR WORK === */
-#our-work {
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
 }
 
 /*  === CARD === */

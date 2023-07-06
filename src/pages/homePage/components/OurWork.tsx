@@ -1,4 +1,5 @@
 import Card from '../../../sharedComponents/Card';
+import { Link } from '@tanstack/router';
 
 interface OurWorkProps {
   workData: {
@@ -20,12 +21,15 @@ const OurWork: React.FC<OurWorkProps> = ({ workData }) => {
         classPrefix='our-work'
       />
     ));
+  
   return (
     <div id='our-work'>
-      <h2>Sample of our work...</h2>
-      <div className='card-container'>{workCards}</div>
-      {/* TO DO: turn this into a link */}
-      <button>See more</button>
+      <div id='our-work-wrapper'>
+        <h2>Sample of our work...</h2>
+        <div className='card-container'>{workCards}</div>
+        <Link to='/our-work' className='see-more'>See More</Link>
+      </div>
+      
     </div>
   );
 };
