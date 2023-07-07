@@ -20,7 +20,7 @@
 }
 .contents {
   max-width: 1280px;
-  padding: 3rem;
+  padding: 0 3rem;
 }
 .heros {
   padding-top: 100px;
@@ -39,56 +39,81 @@
 /* === NAVBAR === */
 
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  max-height: 100px;
-  color: var(--light-font);
-  padding: 1rem 0.5rem;
   transition: background-color 0.2s ease-in-out;
-  z-index: 100;
-
-  #logo-container {
-    // background-color: red;
+  .contents {
+    margin: auto;
+    color: inherit;
+    max-height: 100px;
+    padding: 1rem 0.5rem;
+    // background-color: pink;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
-    a {
-      text-decoration: none;
-      color: inherit;
-      margin: 0 1rem;
-    }
-  }
+    width: 100%;
 
-  #links {
-    font-size: 1.4rem;
-    display: flex;
-    align-self: flex-start;
-
-    li {
-      list-style: none;
-      padding: 0.5rem;
-      border-radius: 20px;
-      transition: background-color 0.3s ease-in-out;
-
-      // &:last-child {
-      //   background-color: red;
-      // }
-
-      &:hover {
-        background-color: rgba(128, 128, 128, 0.3);
-      }
-
+    #logo-container {
+      // background-color: red;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 1.2rem;
       a {
-        font-size: 1.4rem;
         text-decoration: none;
         color: inherit;
         margin: 0 1rem;
+        .thin {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        a {
+          .thin {
+            display: inline;
+          }
+          .wide {
+            display: none;
+          }
+        }
+      }
+    }
+
+    #links {
+      font-size: 1.4rem;
+      display: flex;
+      align-self: flex-start;
+
+      li {
+        list-style: none;
+        padding: 0.5rem;
+        border-radius: 20px;
+        transition: background-color 0.3s ease-in-out;
+
+        // &:last-child {
+        //   background-color: red;
+        // }
+
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.3);
+        }
+
+        a {
+          // font-size: 1.4rem;
+          text-decoration: none;
+          color: inherit;
+          margin: 0 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 600px) {
+      #links {
+        font-size: 1rem;
+        li a {
+          margin: 0 0.5rem;
+        }
       }
     }
   }

@@ -57,24 +57,27 @@ const Navbar: React.FC = () => {
           id='navbar'
           style={{ backgroundColor: navBackgroundColor, color: navTextColor }}
         >
-          <div id='logo-container'>
-            {/* TO DO: add logo when available */}
-            {/* <img src='' id='navbar-logo' /> */}
-            <Link to='/'>
-              <h1>Netron Solutions</h1>
-            </Link>
+          <div className='contents'>
+            <div id='logo-container'>
+              {/* TO DO: add logo when available */}
+              {/* <img src='' id='navbar-logo' /> */}
+              <Link to='/'>
+                <h1 className='wide'>Netron Solutions</h1>
+                <h1 className='thin'>N/S</h1>
+              </Link>
+            </div>
+            <ul id='links'>
+              <li>
+                <Link to='/'>about us</Link>
+              </li>
+              <li>
+                <Link to='/our-work'>our work</Link>
+              </li>
+              <li>
+                <Link to='/contact-us'>contact us</Link>
+              </li>
+            </ul>
           </div>
-          <ul id='links'>
-            <li>
-              <Link to='/'>about us</Link>
-            </li>
-            <li>
-              <Link to='/our-work'>our work</Link>
-            </li>
-            <li>
-              <Link to='/contact-us'>contact us</Link>
-            </li>
-          </ul>
         </nav>
       </header>
       <Particles id='particles' options={fireOptions} init={fireInit} />
