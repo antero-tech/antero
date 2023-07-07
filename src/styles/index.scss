@@ -44,6 +44,7 @@
   left: 0;
   width: 100vw;
   transition: background-color 0.2s ease-in-out;
+  z-index: 100;
   .contents {
     margin: auto;
     // color: inherit;
