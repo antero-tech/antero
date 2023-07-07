@@ -48,17 +48,46 @@
               height: 100%;
               object-fit: cover;
             }
-          }
-          &:hover {
-            .card-img img {
+            .img-hovered {
               transform: scale(1.1);
               transition: all 0.5s ease-in-out;
+            }
+            .img-unhovered {
+              transform: scale(1);
+              transition: all 0.2s ease-in-out;
             }
           }
           .card-text {
             h3 {
               font-size: 2rem;
               margin-bottom: 0.5rem;
+              position: relative;
+            }
+            .h3-unhovered {
+              &:before {
+                content: '';
+                width: 0%;
+                border-bottom: 2px solid var(--dark-font);
+                position: absolute;
+                left: 0;
+                top: 100%;
+                transition: all 0.2s ease-in-out;
+              }
+              transition: all 0.2s ease-in-out;
+            }
+            .h3-hovered {
+              &:before {
+                content: '';
+                width: 60%;
+                border-bottom: 2px solid var(--dark-font);
+                position: absolute;
+                left: 0;
+                top: 100%;
+                transition: all 0.5s ease-in-out;
+              }
+              color: var(--accent-color);
+              padding-left: 10%;
+              transition: all 0.5s ease-in-out;
             }
             p {
               font-family: var(--body-font);
