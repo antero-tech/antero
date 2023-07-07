@@ -51,51 +51,47 @@
   padding: 1rem 0.5rem;
   transition: background-color 0.2s ease-in-out;
   z-index: 100;
-}
 
-/* Navbar logo section */
-#navbar-logo-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1.2rem;
-}
-/* remove styles from links in navbar logo container */
+  #logo-container {
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+      margin: 0 1rem;
+    }
+  }
 
-#navbar-logo-container > a {
-  text-decoration: none;
-  color: inherit;
-  margin: 0 1rem;
-}
+  #links {
+    font-size: 1.4rem;
+    display: flex;
+    align-self: flex-start;
 
-/* Navbar links section */
-#navbar-links {
-  font-size: 1.4rem;
-  display: flex;
-  align-self: flex-start;
-}
+    li {
+      list-style: none;
+      padding: 0.5rem;
+      border-radius: 20px;
+      transition: background-color 0.3s ease-in-out;
 
-/* #navbar-links > li:last-child {
-  background-color: red;
-} */
+      // &:last-child {
+      //   background-color: red;
+      // }
 
-#navbar-links > li {
-  list-style: none;
-  padding: 0.5rem;
-  border-radius: 20px;
-  transition: background-color 0.3s ease-in-out;
-}
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.3);
+      }
 
-#navbar-links > li:hover {
-  background-color: rgba(128, 128, 128, 0.3);
-}
-
-#navbar-links > li > a {
-  /* font-family: 'Open Sans', sans-serif; */
-  font-size: 1.4rem;
-  text-decoration: none;
-  color: inherit;
-  margin: 0 1rem;
+      a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: inherit;
+        margin: 0 1rem;
+      }
+    }
+  }
 }
 
 footer {

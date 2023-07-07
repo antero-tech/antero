@@ -5,9 +5,9 @@ import Footer from './Footer';
 import { useCallback } from 'react';
 // Particles imports
 import Particles from 'react-particles';
-import { loadFull } from 'tsparticles';
+// import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
-import loginParticles from '../../../assets/login-particles.json';
+// import loginParticles from '../../../assets/login-particles.json';
 import { loadFirePreset } from 'tsparticles-preset-fire';
 
 const Navbar: React.FC = () => {
@@ -52,28 +52,30 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <header
-        id='navbar'
-        style={{ backgroundColor: navBackgroundColor, color: navTextColor }}
-      >
-        <div id='navbar-logo-container'>
-          {/* TO DO: add logo when available */}
-          {/* <img src='' id='navbar-logo' /> */}
-          <Link to='/'>
-            <h1>Netron Solutions</h1>
-          </Link>
-        </div>
-        <ul id='navbar-links'>
-          <li>
-            <Link to='/'>about us</Link>
-          </li>
-          <li>
-            <Link to='/our-work'>our work</Link>
-          </li>
-          <li>
-            <Link to='/contact-us'>contact-us</Link>
-          </li>
-        </ul>
+      <header>
+        <nav
+          id='navbar'
+          style={{ backgroundColor: navBackgroundColor, color: navTextColor }}
+        >
+          <div id='logo-container'>
+            {/* TO DO: add logo when available */}
+            {/* <img src='' id='navbar-logo' /> */}
+            <Link to='/'>
+              <h1>Netron Solutions</h1>
+            </Link>
+          </div>
+          <ul id='links'>
+            <li>
+              <Link to='/'>about us</Link>
+            </li>
+            <li>
+              <Link to='/our-work'>our work</Link>
+            </li>
+            <li>
+              <Link to='/contact-us'>contact us</Link>
+            </li>
+          </ul>
+        </nav>
       </header>
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <Outlet />
