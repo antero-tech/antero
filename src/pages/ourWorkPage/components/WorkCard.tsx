@@ -25,11 +25,11 @@ const WorkCard: React.FC<WorkCardProps> = ({
         <img
           src={imgSrc}
           alt={imgAlt}
-          className={isHovered ? 'img-hovered' : 'img-unhovered'}
+          className={isHovered ? 'img-hovered' : ''}
         />
       </div>
       <div className='card-text'>
-        <h3 className={isHovered ? 'h3-hovered' : 'h3-unhovered'}>{title}</h3>
+        <h3 className={isHovered ? 'h3-hovered' : ''}>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
