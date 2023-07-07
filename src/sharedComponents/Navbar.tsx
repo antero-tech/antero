@@ -13,7 +13,7 @@ import { loadFirePreset } from 'tsparticles-preset-fire';
 const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
   const [navBackgroundColor, setNavBackgroundColor] = useState('transparent');
-  const [navTextColor, setNavTextColor] = useState('--light-font');
+  const [navTextColor, setNavTextColor] = useState('var(--light-font)');
 
   useEffect(() => {
     const handleScroll = () => {
