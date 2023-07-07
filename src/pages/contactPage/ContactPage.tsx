@@ -1,10 +1,18 @@
-import './styles.css';
+import ContactForm from './components/ContactForm';
+import './styles.scss';
 
 const ContactPage = () => {
   return (
-    <>
-      <h1>contact page</h1>
-    </>
+    <div id='contact-page' className='pages'>
+      <header className='contents'>
+        <h1>contact us</h1>
+      </header>
+      <div id='form-area'>
+        <div className='contents'>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
   );
 };
 
