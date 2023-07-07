@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <>
+    <div id='app'>
       <header>
         <nav
           id='navbar'
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 export default Navbar;
