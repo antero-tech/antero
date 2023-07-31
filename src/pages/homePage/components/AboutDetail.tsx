@@ -1,27 +1,39 @@
-interface AboutProps {
-  title: string;
-  id: string;
+import { FC } from 'react';
+interface DetailProps {
+  heading: string;
+  subheading1: string;
+  copy1: string;
+  subheading2: string;
+  copy2: string;
   imgSrc: string;
   imgAlt: string;
-  copy: string;
+  alignDirection: string;
 }
 
-const AboutDetail: React.FC<AboutProps> = ({ title, id, imgSrc, imgAlt, copy }) => {
+const AboutDetail: FC<DetailProps> = ({
+  heading,
+  subheading1,
+  copy1,
+  subheading2,
+  copy2,
+  imgSrc,
+  imgAlt,
+  alignDirection,
+}) => {
   return (
-    <div className='detail-wrapper'>
-      
-      <div className='detail-content' id={id}>
-        <div className='detail-img'>
-          <img src={imgSrc} alt={imgAlt} />
-        </div>
-        <div className='detail-copy'>
-          <h3 id='detail-title'>{title}</h3>
-          <p>{copy}</p>
-        </div>
+    <div
+      className={alignDirection === 'right' ? 'detail reverse-flex' : 'detail'}
+    >
+      <img src={imgSrc} alt={imgAlt} />
+      <div className='copy'>
+        <h3>{heading}</h3>
+        <h5>{subheading1}</h5>
+        <p>{copy1}</p>
+        <h5>{subheading2}</h5>
+        <p>{copy2}</p>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
 export default AboutDetail;
