@@ -25,7 +25,7 @@ const AboutDetail: FC<DetailProps> = ({
       className={alignDirection === 'right' ? 'detail reverse-flex' : 'detail'}
     >
       <img src={imgSrc} alt={imgAlt} />
-      <div className='detail-copy'>
+      <div className='copy'>
         <h3>{heading}</h3>
         <h5>{subheading1}</h5>
         <p>{copy1}</p>
