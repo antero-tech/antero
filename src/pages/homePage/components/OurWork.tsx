@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import WorkCard from '../../ourWorkPage/components/WorkCard';
 import { Link } from '@tanstack/router';
 
@@ -23,15 +23,6 @@ const OurWork: FC<OurWorkProps> = ({ workData }) => {
         description={work.description}
       />
     ));
-  // const [dasheClass, setDasheClass] = useState();
-  // const [isHovered, setIsHovered] = useState(false);
-  // const hoverStyle = {
-  //   textDecoration: 'underline',
-  //   '::after': {
-  //     content: 'hello',
-  //     position: 'absolute',
-  //   },
-  // };
 
   return (
     <div id='our-work'>
@@ -40,14 +31,8 @@ const OurWork: FC<OurWorkProps> = ({ workData }) => {
         {workCards}
       </div>
       <span>
-        <Link
-          to='/our-work'
-          // className={isHovered ? 'test-hover see-more' : 'see-more'}
-          className='see-more'
-          // onMouseEnter={() => setIsHovered(true)}
-          // onMouseLeave={() => setIsHovered(false)}
-        >
-          want to see more?
+        <Link to='/our-work' className={'see-more'}>
+          more work
         </Link>
       </span>
     </div>

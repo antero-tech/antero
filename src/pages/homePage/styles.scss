@@ -189,31 +189,34 @@
           color: var(--accent-color);
           font-size: 3rem;
           float: right;
-          margin-right: 14rem;
-          // &::after {
-          //   content: '----------';
-          //   display: inline;
-          //   position: absolute;
-          // }
+          margin-right: 4rem;
+          transition: all 0.5s ease-in-out;
+          &::after {
+            content: '->';
+            display: inline;
+            position: absolute;
+            margin-left: 0.5rem;
+          }
           &:hover {
-            // color: var(--dark-font);
+            color: var(--dark-accent);
           }
         }
-        // .one-dash {
-        //   background-color: green;
-        //   &::after {
-        //     content: '->';
-        //     position: absolute;
-        //   }
-        // }
-        // .two-dash::after {
-        //   content: '-->';
-        //   position: absolute;
-        // }
-        // .three-dash::after {
-        //   content: '--->';
-        //   position: absolute;
-        // }
+        .one-dash::after {
+          content: '->';
+          position: absolute;
+        }
+        .two-dash::after {
+          content: '-->';
+          position: absolute;
+        }
+        .three-dash::after {
+          content: '--->';
+          position: absolute;
+        }
+        .four-dash::after {
+          content: '---->';
+          position: absolute;
+        }
       }
 
       /* === CONTACT === */
