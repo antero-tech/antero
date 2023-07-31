@@ -1,249 +1,44 @@
-#home-page-container {
+#homepage {
   /* === HERO === */
-
-  #home-page-hero {
+  #hero {
     min-height: 70vh;
-  }
-
-  #hero-text {
-    color: var(--light-font);
-    padding: 1rem;
-  }
-  #hero-text > h1 {
-    font-size: 3rem;
-    margin: 0;
-    text-align: center;
-  }
-  #hero-text h1 {
-    font-size: 4rem;
-  }
-  /* === ABOUT US === */
-  #about-us {
-    text-align: center;
-    /* width: 55%; */
-    min-width: 300px;
-    padding: 2rem;
-    /* border: 2px solid red; */
-    color: var(--light-font);
-  }
-  @media screen and (min-width: 768px) {
-    #about-us > h2 {
-      font-size: 2.4rem;
+    // background-color: red;
+    img {
+      width: 10rem;
+      background-color: white;
+      border-radius: 50%;
     }
-  }
-  #about-us h2 {
-    margin-left: 15%;
-    margin-right: 15%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-  }
-  #details-container {
-  }
-  .detail-wrapper {
-    margin-top: 2rem;
-    background-color: rgba(128, 128, 128, 0.3);
-    border-radius: 30px;
-    margin-top: 30px;
-    padding: 30px;
-  }
-  .detail-content {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-  #about-user {
-    flex-direction: row;
-  }
-  .detail-img img {
-    border: 2px solid rgba(128, 128, 128, 0.753);
-    border-radius: 30px;
-  }
-  .detail-copy {
-    padding: 30px;
-    text-align: justify;
-    font-size: 1.2em;
-  }
-  #detail-title {
-    font-size: 2rem;
-  }
-  .detail-copy p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-  }
-
-  /* === OUR WORK === */
-  #our-work {
-    padding: 30px;
-  }
-  #our-work-wrapper {
-    background-color: rgba(128, 128, 128, 0.3);
-    /* border: 2px solid black; */
-    border-radius: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    color: var(--light-font);
-    font-size: 1.5rem;
-  }
-
-  img {
-    border: 2px solid rgba(128, 128, 128, 0.753);
-    border-radius: 30px;
-  }
-
-  .card-container {
-    margin-top: 1rem;
-    display: flex;
-  }
-  .our-work-cards {
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .work-card {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    .card-img {
-      width: 600px;
-      height: 600px;
-      overflow: hidden;
-      border-radius: 20px;
-      margin-bottom: 1rem;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-    &:hover {
-      .card-img img {
-        transform: scale(1.1);
-        transition: all 0.5s ease-in-out;
-      }
-    }
-    .card-text {
-      h3 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-      }
-      p {
-        font-size: 1.5rem;
-      }
-    }
-  }
-  .see-more {
-    margin-top: 2rem;
-    font-size: 1.3rem;
-    background-color: rgba(128, 128, 128, 0.753);
-    padding: 0.5rem 1rem;
-    border-radius: 7px;
-    text-decoration: none;
-    color: var(--light-font);
-  }
-  .see-more:hover {
-    color: var(--dark-font);
-  }
-
-  /* === CONTACT === */
-  #contact {
-    background-color: rgba(128, 128, 128, 0.3);
-    border: 2px solid black;
-    border-radius: 10px;
-    width: 100%;
-    min-width: 300px;
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    padding: 2rem;
-    margin-top: 30px;
-  }
-  #contact-blurb {
-    text-align: center;
-    width: 50%;
-    padding: 1rem;
-    color: var(--light-font);
-  }
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-    background-color: antiquewhite;
-    border: 1px solid wheat;
-    border-radius: 10px;
-    width: 50%;
-    padding: 1rem;
-  }
-  #contact-submit-button {
-    width: fit-content;
-  }
-
-  /*  === CARD === */
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  .card {
-    background-color: antiquewhite;
-    border: 1px solid wheat;
-    border-radius: 10px;
-    /* width: 100%; */
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-  .card > img {
-    max-width: 100%;
-  }
-  #home-page-container {
-    /* === HERO === */
-
-    #home-page-hero {
-      min-height: 70vh;
-    }
-
     #hero-text {
+      // background-color: red;
       color: var(--light-font);
       padding: 1rem;
+      h1 {
+        font-size: 3.5rem;
+      }
     }
-    #hero-text > h1 {
-      font-size: 3rem;
-      margin: 0;
-      text-align: center;
-    }
-    #hero-text h1 {
-      font-size: 4rem;
-    }
+  }
+  #homepage-container {
+    background-color: var(--page-background);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* === ABOUT US === */
     #about-us {
+      background-color: red;
+      margin: 0 auto;
+      color: var(--dark-font);
       text-align: center;
       /* width: 55%; */
       min-width: 300px;
       padding: 2rem;
-
-      color: rgb(246, 245, 244);
-    }
-    @media screen and (min-width: 768px) {
-      #about-us > h2 {
-        font-size: 2.4rem;
-      }
     }
     #about-us h2 {
       margin-left: 15%;
       margin-right: 15%;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 2rem;
-    }
-    #details-container {
     }
     .detail-wrapper {
       margin-top: 2rem;
@@ -277,22 +72,104 @@
       font-size: 1em;
     }
 
-    /* === CONTACT === */
+    /* === OUR WORK === */
+    #our-work {
+      padding: 30px;
+    }
+    #our-work-wrapper {
+      background-color: rgba(128, 128, 128, 0.3);
+      /* border: 2px solid black; */
+      border-radius: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      color: var(--light-font);
+      font-size: 1.5rem;
+    }
 
+    img {
+      border: 2px solid rgba(128, 128, 128, 0.753);
+      border-radius: 30px;
+    }
+
+    .card-container {
+      margin-top: 1rem;
+      display: flex;
+    }
+    .our-work-cards {
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .work-card {
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      .card-img {
+        width: 600px;
+        height: 600px;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &:hover {
+        .card-img img {
+          transform: scale(1.1);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+      .card-text {
+        h3 {
+          font-size: 2rem;
+          margin-bottom: 0.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .see-more {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      background-color: rgba(128, 128, 128, 0.753);
+      padding: 0.5rem 1rem;
+      border-radius: 7px;
+      text-decoration: none;
+      color: var(--light-font);
+    }
+    .see-more:hover {
+      color: var(--dark-font);
+    }
+
+    /* === CONTACT === */
     #contact {
-      background-color: white;
+      background-color: rgba(128, 128, 128, 0.3);
       border: 2px solid black;
       border-radius: 10px;
       width: 100%;
+      min-width: 300px;
       display: flex;
       /* flex-direction: column; */
       align-items: center;
       padding: 2rem;
+      margin-top: 30px;
     }
     #contact-blurb {
       text-align: center;
       width: 50%;
       padding: 1rem;
+      color: var(--light-font);
     }
     #contact-form {
       display: flex;
@@ -305,18 +182,6 @@
     }
     #contact-submit-button {
       width: fit-content;
-    }
-
-    /* === OUR WORK === */
-    #our-work {
-      background-color: white;
-      border: 2px solid black;
-      border-radius: 10px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
     }
 
     /*  === CARD === */
@@ -339,6 +204,143 @@
     }
     .card > img {
       max-width: 100%;
+    }
+    #home-page-container {
+      /* === HERO === */
+
+      #home-page-hero {
+        min-height: 70vh;
+      }
+
+      #hero-text {
+        color: var(--light-font);
+        padding: 1rem;
+      }
+      #hero-text > h1 {
+        font-size: 3rem;
+        margin: 0;
+        text-align: center;
+      }
+      #hero-text h1 {
+        font-size: 4rem;
+      }
+      /* === ABOUT US === */
+      #about-us {
+        text-align: center;
+        /* width: 55%; */
+        min-width: 300px;
+        padding: 2rem;
+
+        color: rgb(246, 245, 244);
+      }
+      @media screen and (min-width: 768px) {
+        #about-us > h2 {
+          font-size: 2.4rem;
+        }
+      }
+      #about-us h2 {
+        margin-left: 15%;
+        margin-right: 15%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+      }
+      #details-container {
+      }
+      .detail-wrapper {
+        margin-top: 2rem;
+        background-color: rgba(128, 128, 128, 0.3);
+        border-radius: 30px;
+        margin-top: 30px;
+        padding: 30px;
+      }
+      .detail-content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
+      #about-user {
+        flex-direction: row;
+      }
+      .detail-img img {
+        border: 2px solid rgba(128, 128, 128, 0.753);
+        border-radius: 30px;
+      }
+      .detail-copy {
+        padding: 30px;
+        text-align: justify;
+        font-size: 1.2em;
+      }
+      #detail-title {
+        font-size: 2rem;
+      }
+      .detail-copy p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+      }
+
+      /* === CONTACT === */
+
+      #contact {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 2rem;
+      }
+      #contact-blurb {
+        text-align: center;
+        width: 50%;
+        padding: 1rem;
+      }
+      #contact-form {
+        display: flex;
+        flex-direction: column;
+        background-color: antiquewhite;
+        border: 1px solid wheat;
+        border-radius: 10px;
+        width: 50%;
+        padding: 1rem;
+      }
+      #contact-submit-button {
+        width: fit-content;
+      }
+
+      /* === OUR WORK === */
+      #our-work {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+      }
+
+      /*  === CARD === */
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      .card {
+        background-color: antiquewhite;
+        border: 1px solid wheat;
+        border-radius: 10px;
+        /* width: 100%; */
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+      .card > img {
+        max-width: 100%;
+      }
     }
   }
 }

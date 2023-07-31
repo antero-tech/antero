@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import AboutDetail from './AboutDetail';
 
 const aboutUsDetails = [
@@ -24,7 +25,7 @@ const aboutUsDetails = [
   },
 ];
 
-const AboutUs: React.FC = () => {
+const AboutUs: FC = () => {
   const aboutDetails = aboutUsDetails.map((detail) => (
     <AboutDetail
       key={detail.title}
