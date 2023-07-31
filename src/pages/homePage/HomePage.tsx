@@ -11,13 +11,13 @@ const HomePage: FC = () => {
   return (
     <main id='homepage' className='pages'>
       <Hero />
-      <section id='homepage-container'>
+      <div id='homepage-container'>
         <div className='contents'>
           <AboutUs />
           <OurWork workData={workData} />
           <Contact />
         </div>
-      </section>
+      </div>
     </main>
   );
 };
