@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+import './styles/index.scss';
 
 import HomePage from './pages/homePage/HomePage';
 import ContactPage from './pages/contactPage/ContactPage';

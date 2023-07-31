@@ -11,7 +11,7 @@ import { loadFirePreset } from 'tsparticles-preset-fire';
 const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
   const [navBackgroundColor, setNavBackgroundColor] = useState('transparent');
-  const [navTextColor, setNavTextColor] = useState('--light-font');
+  const [navTextColor, setNavTextColor] = useState('var(--light-font)');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,34 +49,39 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <>
-      <header
-        id='navbar'
-        style={{ backgroundColor: navBackgroundColor, color: navTextColor }}
-      >
-        <div id='navbar-logo-container'>
-          {/* TO DO: add logo when available */}
-          {/* <img src='' id='navbar-logo' /> */}
-          <Link to='/'>
-            <h1>Netron Solutions</h1>
-          </Link>
-        </div>
-        <ul id='navbar-links'>
-          <li>
-            <Link to='/'>about us</Link>
-          </li>
-          <li>
-            <Link to='/our-work'>our work</Link>
-          </li>
-          <li>
-            <Link to='/contact-us'>contact-us</Link>
-          </li>
-        </ul>
+    <div id='app'>
+      <header>
+        <nav
+          id='navbar'
+          style={{ backgroundColor: navBackgroundColor, color: navTextColor }}
+        >
+          <div className='contents'>
+            <div id='logo-container'>
+              {/* TO DO: add logo when available */}
+              {/* <img src='' id='navbar-logo' /> */}
+              <Link to='/'>
+                <h1 className='wide'>Netron Solutions</h1>
+                <h1 className='thin'>N/S</h1>
+              </Link>
+            </div>
+            <ul id='links'>
+              <li>
+                <Link to='/'>about us</Link>
+              </li>
+              <li>
+                <Link to='/our-work'>our work</Link>
+              </li>
+              <li>
+                <Link to='/contact-us'>contact us</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 export default Navbar;

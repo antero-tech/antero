@@ -1,3 +1,4 @@
+import { useState } from 'react';
 interface WorkCardProps {
   title: string;
   description: string;
@@ -11,13 +12,24 @@ const WorkCard: React.FC<WorkCardProps> = ({
   imgAlt,
   description,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className={'work-card'}>
-      <div className='card-img'>
-        <img src={imgSrc} />
+    <div
+      className={'work-card'}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className={'card-img'}>
+        {/* <div className={'card-img '}> */}
+        <img
+          src={imgSrc}
+          alt={imgAlt}
+          className={isHovered ? 'img-hovered' : ''}
+        />
       </div>
       <div className='card-text'>
-        <h3>{title}</h3>
+        <h3 className={isHovered ? 'h3-hovered' : ''}>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
