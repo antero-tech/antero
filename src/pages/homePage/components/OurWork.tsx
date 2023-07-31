@@ -1,3 +1,4 @@
+import { FC, useState, useEffect } from 'react';
 import WorkCard from '../../ourWorkPage/components/WorkCard';
 import { Link } from '@tanstack/router';
 
@@ -10,7 +11,7 @@ interface OurWorkProps {
   }[];
 }
 
-const OurWork: React.FC<OurWorkProps> = ({ workData }) => {
+const OurWork: FC<OurWorkProps> = ({ workData }) => {
   const workCards = workData
     .slice(0, 2)
     .map((work) => (
@@ -22,15 +23,33 @@ const OurWork: React.FC<OurWorkProps> = ({ workData }) => {
         description={work.description}
       />
     ));
-  
+  // const [dasheClass, setDasheClass] = useState();
+  // const [isHovered, setIsHovered] = useState(false);
+  // const hoverStyle = {
+  //   textDecoration: 'underline',
+  //   '::after': {
+  //     content: 'hello',
+  //     position: 'absolute',
+  //   },
+  // };
+
   return (
     <div id='our-work'>
-      <div id='our-work-wrapper'>
-        <h2>Sample of our work...</h2>
-        <div className='card-container'>{workCards}</div>
-        <Link to='/our-work' className='see-more'>See More</Link>
+      <div className='card-container'>
+        <h2>Our Work</h2>
+        {workCards}
       </div>
-      
+      <span>
+        <Link
+          to='/our-work'
+          // className={isHovered ? 'test-hover see-more' : 'see-more'}
+          className='see-more'
+          // onMouseEnter={() => setIsHovered(true)}
+          // onMouseLeave={() => setIsHovered(false)}
+        >
+          want to see more?
+        </Link>
+      </span>
     </div>
   );
 };
