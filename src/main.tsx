@@ -17,7 +17,7 @@ const rootRoute = new RootRoute({
 //defines child routes
 const indexRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: '/',
+  path: 'netron-home',
   component: HomePage,
 });
 const ourWorkRoute = new Route({
