@@ -5,31 +5,31 @@
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "6b264b5a",
+      "fileHash": "e279ce3c",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "3eeda3d9",
+      "fileHash": "9ad4c268",
       "needsInterop": true
     },
     "@tanstack/router": {
       "src": "../../node_modules/@tanstack/router/build/esm/index.js",
       "file": "@tanstack_router.js",
-      "fileHash": "2a92f12f",
+      "fileHash": "6bdd02c5",
       "needsInterop": false
     },
     "react-particles": {
       "src": "../../node_modules/react-particles/esm/index.js",
       "file": "react-particles.js",
-      "fileHash": "1e77eaff",
+      "fileHash": "f592c2f9",
       "needsInterop": false
     },
     "tsparticles-preset-fire": {
       "src": "../../node_modules/tsparticles-preset-fire/esm/index.js",
       "file": "tsparticles-preset-fire.js",
-      "fileHash": "25ee7b59",
+      "fileHash": "bc831c9c",
       "needsInterop": false
     }
   },

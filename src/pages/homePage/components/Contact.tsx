@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
     // console.log('formValues: ', formValues);
     const { name, email, description } = formValues;
     if (name && email && description) {
-      const message = `Name: ${name}\nEmail: ${email}\nDescription: ${description}`;
+      // const message = `Name: ${name}\nEmail: ${email}\nDescription: ${description}`;
       //server side send an email
       //TO DO: DO THIS
       console.log('sending email');
