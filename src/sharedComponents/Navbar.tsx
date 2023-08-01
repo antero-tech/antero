@@ -5,9 +5,7 @@ import Footer from './Footer';
 import { useCallback } from 'react';
 // Particles imports
 import Particles from 'react-particles';
-// import { loadFull } from 'tsparticles';
 import { Engine } from 'tsparticles-engine';
-// import loginParticles from '../../../assets/login-particles.json';
 import { loadFirePreset } from 'tsparticles-preset-fire';
 
 const Navbar: React.FC = () => {
