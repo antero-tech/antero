@@ -17,7 +17,7 @@ const aboutUsDetails = [
     heading: "It's About the User",
     subheading1: 'Lorem Ipsum',
     copy1:
-      'At Netron Solutions, we are passionate about crafting unforgettable user experiences (UX) that leave a lasting impact. Our team of expert designers meticulously analyze user behaviors, needs, and expectations to design an incredible UX that captivates and engages your audience. We prioritize user-centric design principles, ensuring intuitive navigation, seamless interactions, and visually stunning interfaces.',
+      'At Antero, we are passionate about crafting unforgettable user experiences (UX) that leave a lasting impact. Our team of expert designers meticulously analyze user behaviors, needs, and expectations to design an incredible UX that captivates and engages your audience. We prioritize user-centric design principles, ensuring intuitive navigation, seamless interactions, and visually stunning interfaces.',
     subheading2: 'Lorem Ipsum',
     copy2:
       'By incorporating the latest UX trends and best practices, we create a harmonious blend of aesthetics and functionality that keeps users coming back for more. With our meticulous attention to detail and dedication to creating exceptional UX, we empower your brand to stand out in a crowded digital landscape. Trust us to design an unforgettable user experience that leaves a lasting impression on your visitors.',

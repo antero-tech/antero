@@ -3,9 +3,8 @@ const Footer = () => {
     <footer id='footer'>
       <div className='contents'>
         <div id='company-contact'>
-          <h4>NETRON SOLUTIONS</h4>
-          {/* TO DO: update this to real imformation */}
-          <p>- projects@netronsolutions.com</p>
+          <h4>Antero</h4>
+          <p>- projects@antero.dev</p>
           <p>- +1-800-555-5555</p>
         </div>
         <div id='offices'>
