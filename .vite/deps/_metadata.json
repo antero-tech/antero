@@ -1,0 +1,47 @@
+{
+  "hash": "fb3bee2c",
+  "browserHash": "045a100c",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "6b264b5a",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "3eeda3d9",
+      "needsInterop": true
+    },
+    "@tanstack/router": {
+      "src": "../../node_modules/@tanstack/router/build/esm/index.js",
+      "file": "@tanstack_router.js",
+      "fileHash": "2a92f12f",
+      "needsInterop": false
+    },
+    "react-particles": {
+      "src": "../../node_modules/react-particles/esm/index.js",
+      "file": "react-particles.js",
+      "fileHash": "1e77eaff",
+      "needsInterop": false
+    },
+    "tsparticles-preset-fire": {
+      "src": "../../node_modules/tsparticles-preset-fire/esm/index.js",
+      "file": "tsparticles-preset-fire.js",
+      "fileHash": "25ee7b59",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BTRZQP7J": {
+      "file": "chunk-BTRZQP7J.js"
+    },
+    "chunk-WY4WJDO6": {
+      "file": "chunk-WY4WJDO6.js"
+    },
+    "chunk-42KM6NI4": {
+      "file": "chunk-42KM6NI4.js"
+    }
+  }
+}
