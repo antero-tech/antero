@@ -60,8 +60,8 @@ const Navbar: React.FC = () => {
               {/* TO DO: add logo when available */}
               {/* <img src='' id='navbar-logo' /> */}
               <Link to='/'>
-                <h1 className='wide'>Netron Solutions</h1>
-                <h1 className='thin'>N/S</h1>
+                <h1 className='wide'>Antero</h1>
+                <h1 className='thin'>Antero</h1>
               </Link>
             </div>
             <ul id='links'>
