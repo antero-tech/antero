@@ -59,14 +59,14 @@ const Navbar: React.FC = () => {
             <div id='logo-container'>
               {/* TO DO: add logo when available */}
               {/* <img src='' id='navbar-logo' /> */}
-              <Link to='/'>
+              <Link to='/netron-home'>
                 <h1 className='wide'>Netron Solutions</h1>
                 <h1 className='thin'>N/S</h1>
               </Link>
             </div>
             <ul id='links'>
               <li>
-                <Link to='/'>about us</Link>
+                <Link to='/netron-home'>about us</Link>
               </li>
               <li>
                 <Link to='/our-work'>our work</Link>
