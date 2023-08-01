@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useRef } from 'react';
+import { FC } from 'react';
 import WorkCard from '../../ourWorkPage/components/WorkCard';
 import { Link } from '@tanstack/router';
 
