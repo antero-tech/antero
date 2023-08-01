@@ -21,7 +21,6 @@ const WorkCard: React.FC<WorkCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className={'card-img'}>
-        {/* <div className={'card-img '}> */}
         <img
           src={imgSrc}
           alt={imgAlt}
