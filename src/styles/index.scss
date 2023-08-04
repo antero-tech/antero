@@ -146,9 +146,6 @@ img {
 // === FOOTER ===
 
 footer {
-  // flex-shrink: 0;
-  // flex-grow: 0;
-  // flex-basis: auto;
   background-color: var(--footer-background);
   width: 100vw;
   display: flex;
@@ -171,6 +168,13 @@ footer {
         margin-left: 1.5rem;
       }
     }
+
+    #see-more-button {
+      display: none;
+      padding: 0.2rem;
+      // border-radius: 50%;
+      border: none;
+    }
     #offices {
       display: flex;
       flex-direction: row;
@@ -183,6 +187,24 @@ footer {
         }
         p {
           font-family: var(--body-font);
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      padding: 0;
+      align-items: center;
+      #see-more-button {
+        display: block;
+      }
+      #offices {
+        flex-direction: column;
+      }
+      p {
+        display: none;
+      }
+      &.see-more {
+        p {
+          display: block;
         }
       }
     }
