@@ -29,6 +29,8 @@ img {
 .contents {
   max-width: 1280px;
   padding: 0 3rem;
+  // overflow: hidden;
+
 }
 .heros {
   padding-top: 100px;
@@ -38,6 +40,9 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: 400px) {
+    padding-top: 50px;
+  }
 }
 #particles {
   position: absolute;
@@ -63,6 +68,7 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    
 
     #logo-container {
       // background-color: red;
@@ -74,22 +80,29 @@ img {
         text-decoration: none;
         color: inherit;
         margin: 0 1rem;
-        .thin {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        a {
-          .thin {
-            display: inline;
-          }
-          .wide {
-            display: none;
-          }
-        }
       }
     }
-
+    #hamburger {
+      display: none;
+      width: 30px;
+      height: 3px;
+      background-color: var(--light-font);
+      position: relative;
+      border-radius: 2px;
+      &::before, &::after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        border-bottom: 3px solid var(--light-font);
+        border-radius: 2px;
+      }
+      &::before {
+        top: -8px;
+      }
+      &::after{
+        top: 8px;
+      }
+    }
     #links {
       font-size: 1.4rem;
       display: flex;
@@ -117,13 +130,16 @@ img {
         }
       }
     }
-    @media screen and (max-width: 600px) {
-      #links {
-        font-size: 1rem;
-        li a {
-          margin: 0 0.5rem;
+    @media screen and (max-width: 400px) {
+      padding: .5rem .5rem;
+        #hamburger {
+          display: block;
         }
-      }
+        // TO DO: look into why this parent class is being recognized still by the DOM
+        .wide{
+          display: none;
+          width: 0;
+        }
     }
   }
 }

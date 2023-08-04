@@ -29,8 +29,8 @@ const AboutDetail: FC<DetailProps> = ({
         <h3>{heading}</h3>
         <h5>{subheading1}</h5>
         <p>{copy1}</p>
-        <h5>{subheading2}</h5>
-        <p>{copy2}</p>
+        <h5 className='phone'>{subheading2}</h5>
+        <p className='phone'>{copy2}</p>
       </div>
     </div>
   );

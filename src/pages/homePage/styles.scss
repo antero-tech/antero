@@ -13,11 +13,24 @@
         font-size: 3.5rem;
       }
     }
+    @media screen and (max-width: 400px){
+      min-height: 45vh; 
+      img {
+        width: 7rem;
+      }
+      #hero-text {
+        padding: 1.5rem 1rem;
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
   }
   #homepage-container {
     background-color: var(--page-background);
     width: 100%;
     display: flex;
+
     flex-direction: column;
     align-items: center;
     .contents {
@@ -25,6 +38,8 @@
       #about-us {
         text-align: center;
         padding-top: 3rem;
+        margin-bottom: 4rem;
+        
         h2 {
           margin: 0 15%;
           font-size: 3rem;
@@ -59,7 +74,7 @@
               padding-right: 6rem;
               width: 70%;
               text-align: justify;
-              font-size: 1.2em;
+              font-size: 1.2rem;
               h3 {
                 font-size: 2rem;
                 margin-left: -1rem;
@@ -93,7 +108,62 @@
             }
           }
         }
-        margin-bottom: 4rem;
+        @media screen and (max-width: 400px){
+          padding-top: 1.5rem;
+          h2 {
+            font-size: 2.3rem;
+            margin: 0;
+            p {
+              font-size: 1rem;
+              padding-top: .5rem;
+            }
+            &::before {
+              width: 8.6rem;
+              top: 2.5rem;
+            }
+           
+          }
+          #details-container {
+            // background-color: orange;
+            margin-top: 1rem;
+            padding-top: 0;
+            .detail {
+
+              flex-direction: column;
+              //background-color: pink;
+              img {
+                padding: 0;
+                width: 60%;
+              }
+              .copy {
+                padding: 0;
+                width: 100%;
+                // background-color: orange;
+                text-align: left;
+                font-size: 1rem;
+                h3 {
+                  &::after {
+                    display: none;
+                  }
+                  padding-top: .5rem;
+                  margin: 0;
+                  text-align: center;
+                }
+                h5 {
+                  
+                }
+                p{
+                  
+                }
+                .phone {
+                  display: none;
+                }
+              }
+            }
+          }
+          
+        }
+          
       }
 
       hr {

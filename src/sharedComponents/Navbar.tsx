@@ -60,27 +60,28 @@ const Navbar: React.FC = () => {
               {/* TO DO: add logo when available */}
               {/* <img src='' id='navbar-logo' /> */}
               <Link to='/'>
-                <h1 className='wide'>Antero</h1>
-                <h1 className='thin'>Antero</h1>
+                <h1>Antero</h1>
               </Link>
             </div>
-            <ul id='links'>
-              <li>
+            <ul id='links' className='wide'>
+              <li className='wide'>
                 <Link to='/'>about us</Link>
               </li>
-              <li>
+              <li className='wide'>
                 <Link to='/our-work'>our work</Link>
               </li>
-              <li>
+              <li className='wide'>
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
+            <div className="thin" id='hamburger'>
+            </div>
           </div>
         </nav>
       </header>
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <Outlet />
-      <Footer />
+      <Footer /> 
     </div>
   );
 };
