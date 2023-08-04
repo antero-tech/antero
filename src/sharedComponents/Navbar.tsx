@@ -74,14 +74,13 @@ const Navbar: React.FC = () => {
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
-            <div className="thin" id='hamburger'>
-            </div>
+            <div className='thin' id='hamburger'></div>
           </div>
         </nav>
       </header>
       <Particles id='particles' options={fireOptions} init={fireInit} />
       <Outlet />
-      <Footer /> 
+      <Footer />
     </div>
   );
 };

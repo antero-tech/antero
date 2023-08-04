@@ -28,9 +28,8 @@ img {
 }
 .contents {
   max-width: 1280px;
+  width: 100%;
   padding: 0 3rem;
-  // overflow: hidden;
-
 }
 .heros {
   padding-top: 100px;
@@ -68,7 +67,6 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
 
     #logo-container {
       // background-color: red;
@@ -89,7 +87,8 @@ img {
       background-color: var(--light-font);
       position: relative;
       border-radius: 2px;
-      &::before, &::after {
+      &::before,
+      &::after {
         position: absolute;
         content: '';
         width: 30px;
@@ -99,7 +98,7 @@ img {
       &::before {
         top: -8px;
       }
-      &::after{
+      &::after {
         top: 8px;
       }
     }
@@ -131,15 +130,15 @@ img {
       }
     }
     @media screen and (max-width: 400px) {
-      padding: .5rem .5rem;
-        #hamburger {
-          display: block;
-        }
-        // TO DO: look into why this parent class is being recognized still by the DOM
-        .wide{
-          display: none;
-          width: 0;
-        }
+      padding: 0.5rem 0.5rem;
+      #hamburger {
+        display: block;
+      }
+      // TO DO: look into why this parent class is being recognized still by the DOM
+      .wide {
+        display: none;
+        width: 0;
+      }
     }
   }
 }
