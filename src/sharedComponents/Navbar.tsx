@@ -94,7 +94,6 @@ const Navbar: React.FC = () => {
             <div id='hamburger-container' onClick={hamburgerClick}>
               <div
                 style={{ backgroundColor: navTextColor }}
-                // style={{ borderBottom: `3px solid ${navTextColor}` }}
                 className={
                   hamburgerOpen
                     ? 'hamburger xHamburger'

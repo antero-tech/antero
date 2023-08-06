@@ -110,7 +110,6 @@ img {
         top: calc(50% - 1.5px);
         margin: 0 auto;
         height: 3px;
-        width: 25px;
         position: relative;
         border-radius: 2px;
         z-index: 100;
@@ -136,6 +135,8 @@ img {
         }
       }
       .xHamburger {
+        left: -12.5px;
+        width: 0px;
         &::before {
           transform: rotate(-135deg);
           top: 0;
@@ -181,7 +182,7 @@ img {
 
       ul {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-evenly;
         li:nth-child(1) {
           list-style: none;
         }
