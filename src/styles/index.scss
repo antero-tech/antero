@@ -170,30 +170,23 @@ img {
       position: absolute;
       display: flex;
       flex-direction: column;
-      // align-items: center;
-
       top: 0;
       left: 100vw;
       padding-top: 50px;
       transition: all 0.3s ease-in-out;
       &.open {
-        // background-color: var(--navbar-background);
         background-color: rgb(246, 245, 244);
         left: 0;
       }
 
       ul {
-        // background-color: pink;
         display: flex;
         justify-content: flex-end;
         li:nth-child(1) {
           list-style: none;
         }
         li {
-          // background-color: blue;
-          // list-style: none;
           text-align: center;
-          // margin: auto;
           margin: 0 0.7rem;
         }
       }
