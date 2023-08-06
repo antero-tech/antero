@@ -59,10 +59,9 @@ img {
   z-index: 100;
   .contents {
     margin: auto;
-    // color: inherit;
+
     max-height: 100px;
     padding: 1rem 0.5rem;
-    // background-color: pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,38 +69,15 @@ img {
 
     #logo-container {
       // background-color: red;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 1.2rem;
+
+      font-size: 2rem;
       a {
         text-decoration: none;
         color: inherit;
         margin: 0 1rem;
       }
     }
-    #hamburger {
-      display: none;
-      width: 30px;
-      height: 3px;
-      background-color: var(--light-font);
-      position: relative;
-      border-radius: 2px;
-      &::before,
-      &::after {
-        position: absolute;
-        content: '';
-        width: 30px;
-        border-bottom: 3px solid var(--light-font);
-        border-radius: 2px;
-      }
-      &::before {
-        top: -8px;
-      }
-      &::after {
-        top: 8px;
-      }
-    }
+
     #links {
       font-size: 1.4rem;
       display: flex;
@@ -112,10 +88,6 @@ img {
         padding: 0.5rem;
         border-radius: 20px;
         transition: background-color 0.3s ease-in-out;
-
-        // &:last-child {
-        //   background-color: red;
-        // }
 
         &:hover {
           background-color: rgba(128, 128, 128, 0.3);
@@ -129,14 +101,42 @@ img {
         }
       }
     }
+    #hamburger {
+      display: none;
+      width: 25px;
+      height: 3px;
+      position: relative;
+      border-radius: 2px;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: inherit;
+        height: inherit;
+        background-color: inherit;
+        border-radius: inherit;
+      }
+      &::before {
+        top: -8px;
+      }
+      &::after {
+        top: 8px;
+      }
+    }
     @media screen and (max-width: 400px) {
       padding: 0.5rem 0.5rem;
       #hamburger {
         display: block;
       }
       // TO DO: look into why this parent class is being recognized still by the DOM
-      .wide {
+      .listi {
         display: none;
+      }
+      #links {
+        display: none;
+      }
+      .wide {
+        // display: none;
         width: 0;
       }
     }
