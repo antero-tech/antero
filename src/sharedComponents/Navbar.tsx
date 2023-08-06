@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
 
-import { useCallback } from 'react';
 // Particles imports
 import Particles from 'react-particles';
 import { Engine } from 'tsparticles-engine';
@@ -57,13 +56,9 @@ const Navbar: React.FC = () => {
         >
           <div className='contents'>
             <div id='logo-container'>
-              {/* TO DO: add logo when available */}
-              {/* <img src='' id='navbar-logo' /> */}
-              <Link to='/'>
-                <h1>Antero</h1>
-              </Link>
+              <Link to='/'>Antero</Link>
             </div>
-            <ul id='links' className='wide'>
+            <ul id='links' className='wide listi'>
               <li className='wide'>
                 <Link to='/'>about us</Link>
               </li>
@@ -74,7 +69,13 @@ const Navbar: React.FC = () => {
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
-            <div className='thin' id='hamburger'></div>
+            <div style={{ backgroundColor: 'red' }}>
+              <span
+                className='thin'
+                id='hamburger'
+                style={{ backgroundColor: navTextColor }}
+              ></span>
+            </div>
           </div>
         </nav>
       </header>
