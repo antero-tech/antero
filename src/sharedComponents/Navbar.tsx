@@ -11,17 +11,20 @@ const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
   const [navBackgroundColor, setNavBackgroundColor] = useState('transparent');
   const [navTextColor, setNavTextColor] = useState('var(--light-font)');
-
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        //set nav to white with dark font
-        setNavTextColor('var(--dark-font)');
-        setNavBackgroundColor('var(--nav-background)');
-      } else {
-        //set nav to transparent with light font
-        setNavTextColor('var(--light-font)');
-        setNavBackgroundColor('transparent');
+      //only change colors if hamburger is closed, otherwise it will overwrite the ham menu styles
+      if (!hamburgerOpen) {
+        if (window.scrollY > 30) {
+          //set nav to white with dark font
+          setNavTextColor('var(--dark-font)');
+          setNavBackgroundColor('var(--nav-background)');
+        } else {
+          //set nav to transparent with light font
+          setNavTextColor('var(--light-font)');
+          setNavBackgroundColor('transparent');
+        }
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -29,7 +32,7 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [hamburgerOpen]);
 
   const fireInit = useCallback(async (engine: Engine): Promise<void> => {
     await loadFirePreset(engine);
@@ -45,6 +48,25 @@ const Navbar: React.FC = () => {
         speed: 0.5,
       },
     },
+  };
+  const hamburgerClick = () => {
+    if (window.scrollY > 30) {
+      setNavBackgroundColor('var(--nav-background)');
+      setNavTextColor('var(--dark-font)');
+    } else {
+      //if we are ar the top of the page, and we are clicking to open the menu
+      //we need to make the nav background white, and the text dark
+      if (!hamburgerOpen) {
+        setNavBackgroundColor('var(--nav-background)');
+        setNavTextColor('var(--dark-font)');
+      } else {
+        //if we are at the top and are closing the menu
+        //make the bacjground transpareent and the test light
+        setNavBackgroundColor('transparent');
+        setNavTextColor('var(--light-font)');
+      }
+    }
+    setHamburgerOpen(!hamburgerOpen);
   };
 
   return (
@@ -69,12 +91,29 @@ const Navbar: React.FC = () => {
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
-            <div style={{ backgroundColor: 'red' }}>
-              <span
-                className='thin'
-                id='hamburger'
+            <div id='hamburger-container' onClick={hamburgerClick}>
+              <div
                 style={{ backgroundColor: navTextColor }}
-              ></span>
+                // style={{ borderBottom: `3px solid ${navTextColor}` }}
+                className={
+                  hamburgerOpen
+                    ? 'hamburger xHamburger'
+                    : 'hamburger flatHamburger'
+                }
+              ></div>
+              <div id='hamburger-menu' className={hamburgerOpen ? 'open' : ''}>
+                <ul>
+                  <li>
+                    <Link to='/'>about us</Link>
+                  </li>
+                  <li>
+                    <Link to='/our-work'>our work</Link>
+                  </li>
+                  <li>
+                    <Link to='/contact-us'>contact us</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </nav>

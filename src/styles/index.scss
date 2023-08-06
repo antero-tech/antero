@@ -65,12 +65,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    // width: 100%;
+    // max-width: 100vw;
 
     #logo-container {
-      // background-color: red;
-
       font-size: 2rem;
+      z-index: 100;
       a {
         text-decoration: none;
         color: inherit;
@@ -88,56 +88,114 @@ img {
         padding: 0.5rem;
         border-radius: 20px;
         transition: background-color 0.3s ease-in-out;
-
         &:hover {
           background-color: rgba(128, 128, 128, 0.3);
         }
-
         a {
-          // font-size: 1.4rem;
           text-decoration: none;
           color: inherit;
           margin: 0 1rem;
         }
       }
     }
-    #hamburger {
+    #hamburger-container {
       display: none;
-      width: 25px;
-      height: 3px;
-      position: relative;
-      border-radius: 2px;
-      &::before,
-      &::after {
-        position: absolute;
-        content: '';
-        width: inherit;
-        height: inherit;
-        background-color: inherit;
-        border-radius: inherit;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      &:active {
+        background-color: rgba(128, 128, 128, 0.3);
       }
-      &::before {
-        top: -8px;
+      .hamburger {
+        top: calc(50% - 1.5px);
+        margin: 0 auto;
+        height: 3px;
+        width: 25px;
+        position: relative;
+        border-radius: 2px;
+        z-index: 100;
+        transition: rotate 0.3s ease-in-out;
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: inherit;
+          background-color: inherit;
+          border-radius: inherit;
+          transition: all 0.3s ease-in-out;
+        }
       }
-      &::after {
-        top: 8px;
+      .flatHamburger {
+        width: 25px;
+        &::before {
+          top: -8px;
+        }
+        &::after {
+          top: 8px;
+        }
+      }
+      .xHamburger {
+        &::before {
+          transform: rotate(-135deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(135deg);
+          top: 0;
+        }
       }
     }
     @media screen and (max-width: 400px) {
       padding: 0.5rem 0.5rem;
-      #hamburger {
+      #hamburger-container {
         display: block;
+        #hamburger {
+          background-color: red;
+        }
       }
       // TO DO: look into why this parent class is being recognized still by the DOM
-      .listi {
-        display: none;
-      }
       #links {
         display: none;
+        li {
+          display: none;
+          a {
+            display: none;
+          }
+        }
       }
-      .wide {
-        // display: none;
-        width: 0;
+    }
+    #hamburger-menu {
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+
+      top: 0;
+      left: 100vw;
+      padding-top: 50px;
+      transition: all 0.3s ease-in-out;
+      &.open {
+        // background-color: var(--navbar-background);
+        background-color: rgb(246, 245, 244);
+        left: 0;
+      }
+
+      ul {
+        // background-color: pink;
+        display: flex;
+        justify-content: flex-end;
+        li:nth-child(1) {
+          list-style: none;
+        }
+        li {
+          // background-color: blue;
+          // list-style: none;
+          text-align: center;
+          // margin: auto;
+          margin: 0 0.7rem;
+        }
       }
     }
   }
