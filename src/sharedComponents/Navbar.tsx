@@ -12,8 +12,9 @@ const Navbar: React.FC = () => {
   const [navBackgroundColor, setNavBackgroundColor] = useState('transparent');
   const [navTextColor, setNavTextColor] = useState('var(--light-font)');
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('');
+
   useEffect(() => {
-    console.log('hey');
     const handleScroll = () => {
       //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles
       if (!hamburgerOpen) {
@@ -80,14 +81,14 @@ const Navbar: React.FC = () => {
             <div id='logo-container'>
               <Link to='/'>Antero</Link>
             </div>
-            <ul id='links' className='wide listi'>
-              <li className='wide'>
+            <ul id='links'>
+              <li>
                 <Link to='/'>about us</Link>
               </li>
-              <li className='wide'>
+              <li>
                 <Link to='/our-work'>our work</Link>
               </li>
-              <li className='wide'>
+              <li>
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
@@ -109,15 +110,21 @@ const Navbar: React.FC = () => {
               style={{ backgroundColor: navBackgroundColor }}
             >
               <ul>
-                <li>
+                <li onClick={() => setActiveTab(window.location.pathname)}>
                   <Link to='/'>about us</Link>
                 </li>
                 {'\u25CF'}
-                <li>
+                <li
+                  onClick={() => setActiveTab(window.location.pathname)}
+                  className={activeTab === '/our-work' ? 'active-tab' : ''}
+                >
                   <Link to='/our-work'>our work</Link>
                 </li>
                 {'\u25CF'}
-                <li>
+                <li
+                  onClick={() => setActiveTab(window.location.pathname)}
+                  className={activeTab === '/contact-us' ? 'active-tab' : ''}
+                >
                   <Link to='/contact-us'>contact us</Link>
                 </li>
               </ul>
