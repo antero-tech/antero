@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
 
-import { useCallback } from 'react';
 // Particles imports
 import Particles from 'react-particles';
 import { Engine } from 'tsparticles-engine';
@@ -12,17 +11,22 @@ const Navbar: React.FC = () => {
   //use useState to hold background color for navbar
   const [navBackgroundColor, setNavBackgroundColor] = useState('transparent');
   const [navTextColor, setNavTextColor] = useState('var(--light-font)');
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        //set nav to white with dark font
-        setNavTextColor('var(--dark-font)');
-        setNavBackgroundColor('var(--nav-background)');
-      } else {
-        //set nav to transparent with light font
-        setNavTextColor('var(--light-font)');
-        setNavBackgroundColor('transparent');
+      //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles
+      if (!hamburgerOpen) {
+        if (window.scrollY > 30) {
+          //set nav to white with dark font
+          setNavTextColor('var(--dark-font)');
+          setNavBackgroundColor('var(--nav-background)');
+        } else {
+          //set nav to transparent with light font
+          setNavTextColor('var(--light-font)');
+          setNavBackgroundColor('transparent');
+        }
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -30,7 +34,7 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [hamburgerOpen]);
 
   const fireInit = useCallback(async (engine: Engine): Promise<void> => {
     await loadFirePreset(engine);
@@ -47,7 +51,25 @@ const Navbar: React.FC = () => {
       },
     },
   };
-
+  const hamburgerClick = () => {
+    if (window.scrollY > 30) {
+      setNavBackgroundColor('var(--nav-background)');
+      setNavTextColor('var(--dark-font)');
+    } else {
+      //if we are ar the top of the page, and we are clicking to open the menu
+      //we need to make the nav background white, and the text dark
+      if (!hamburgerOpen) {
+        setNavBackgroundColor('var(--nav-background)');
+        setNavTextColor('var(--dark-font)');
+      } else {
+        //if we are at the top and are closing the menu
+        //make the bacjground transpareent and the test light
+        setNavBackgroundColor('transparent');
+        setNavTextColor('var(--light-font)');
+      }
+    }
+    setHamburgerOpen(!hamburgerOpen);
+  };
   return (
     <div id='app'>
       <header>
@@ -57,12 +79,7 @@ const Navbar: React.FC = () => {
         >
           <div className='contents'>
             <div id='logo-container'>
-              {/* TO DO: add logo when available */}
-              {/* <img src='' id='navbar-logo' /> */}
-              <Link to='/'>
-                <h1 className='wide'>Antero</h1>
-                <h1 className='thin'>Antero</h1>
-              </Link>
+              <Link to='/'>Antero</Link>
             </div>
             <ul id='links'>
               <li>
@@ -75,6 +92,43 @@ const Navbar: React.FC = () => {
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
+            <div id='hamburger-icon-container' onClick={hamburgerClick}>
+              {/* this is the hamburger icon only  */}
+              <div
+                style={{ backgroundColor: navTextColor }}
+                className={
+                  hamburgerOpen
+                    ? 'hamburger xHamburger'
+                    : 'hamburger flatHamburger'
+                }
+              ></div>
+              {/* this is the menu that opens when you click the hamburger icon */}
+            </div>
+            <div
+              id='hamburger-menu'
+              className={hamburgerOpen ? 'open' : ''}
+              style={{ backgroundColor: navBackgroundColor }}
+            >
+              <ul>
+                <li onClick={() => setActiveTab(window.location.pathname)}>
+                  <Link to='/'>about us</Link>
+                </li>
+                {'\u25CF'}
+                <li
+                  onClick={() => setActiveTab(window.location.pathname)}
+                  className={activeTab === '/our-work' ? 'active-tab' : ''}
+                >
+                  <Link to='/our-work'>our work</Link>
+                </li>
+                {'\u25CF'}
+                <li
+                  onClick={() => setActiveTab(window.location.pathname)}
+                  className={activeTab === '/contact-us' ? 'active-tab' : ''}
+                >
+                  <Link to='/contact-us'>contact us</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
