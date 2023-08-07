@@ -28,6 +28,7 @@ img {
 }
 .contents {
   max-width: 1280px;
+  width: 100%;
   padding: 0 3rem;
 }
 .heros {
@@ -38,6 +39,9 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: 400px) {
+    padding-top: 50px;
+  }
 }
 #particles {
   position: absolute;
@@ -55,38 +59,20 @@ img {
   z-index: 100;
   .contents {
     margin: auto;
-    // color: inherit;
+
     max-height: 100px;
     padding: 1rem 0.5rem;
-    // background-color: pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 
     #logo-container {
-      // background-color: red;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 1.2rem;
+      font-size: 2rem;
+      z-index: 100;
       a {
         text-decoration: none;
         color: inherit;
         margin: 0 1rem;
-        .thin {
-          display: none;
-        }
-      }
-      @media screen and (max-width: 600px) {
-        a {
-          .thin {
-            display: inline;
-          }
-          .wide {
-            display: none;
-          }
-        }
       }
     }
 
@@ -100,28 +86,119 @@ img {
         padding: 0.5rem;
         border-radius: 20px;
         transition: background-color 0.3s ease-in-out;
-
-        // &:last-child {
-        //   background-color: red;
-        // }
-
         &:hover {
           background-color: rgba(128, 128, 128, 0.3);
         }
-
         a {
-          // font-size: 1.4rem;
           text-decoration: none;
           color: inherit;
           margin: 0 1rem;
         }
       }
     }
-    @media screen and (max-width: 600px) {
+    #hamburger-icon-container {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      z-index: 100;
+      &:active {
+        background-color: rgba(128, 128, 128, 0.3);
+      }
+      .hamburger {
+        top: calc(50% - 1.5px);
+        margin: 0 auto;
+        height: 3px;
+        position: relative;
+        border-radius: 2px;
+        z-index: 100;
+        transition: rotate 0.3s ease-in-out;
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+          width: 25px;
+          height: inherit;
+          background-color: inherit;
+          border-radius: inherit;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      .flatHamburger {
+        width: 25px;
+        &::before {
+          top: -8px;
+        }
+        &::after {
+          top: 8px;
+        }
+      }
+      .xHamburger {
+        left: -12.5px;
+        width: 0px;
+        &::before {
+          transform: rotate(-135deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(135deg);
+          top: 0;
+        }
+      }
+    }
+
+    #hamburger-menu {
+      width: 100vw;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      left: 100vw;
+      padding-top: 50px;
+      transition: all 0.3s ease-in-out;
+      display: none;
+      &.open {
+        // TO DO: look into why this won't accept a style variable
+        background-color: rgb(246, 245, 244);
+        left: 0;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        li {
+          border-radius: 20px;
+          padding: 0.1rem 0.5rem;
+          margin-bottom: 0.3rem;
+          &.active-tab {
+            background-color: rgba(128, 128, 128, 0.3);
+          }
+          &:active {
+            background-color: rgba(128, 128, 128, 0.3);
+          }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      padding: 0.5rem 0.5rem;
+      #hamburger-icon-container,
+      #hamburger-menu {
+        display: block;
+      }
+
+      // TO DO: look into why this parent class is being recognized still by the DOM
       #links {
-        font-size: 1rem;
-        li a {
-          margin: 0 0.5rem;
+        display: none;
+        li {
+          display: none;
+          a {
+            display: none;
+          }
         }
       }
     }
@@ -131,9 +208,6 @@ img {
 // === FOOTER ===
 
 footer {
-  // flex-shrink: 0;
-  // flex-grow: 0;
-  // flex-basis: auto;
   background-color: var(--footer-background);
   width: 100vw;
   display: flex;
@@ -156,6 +230,13 @@ footer {
         margin-left: 1.5rem;
       }
     }
+
+    #see-more-button {
+      display: none;
+      padding: 0.2rem;
+      // border-radius: 50%;
+      border: none;
+    }
     #offices {
       display: flex;
       flex-direction: row;
@@ -168,6 +249,24 @@ footer {
         }
         p {
           font-family: var(--body-font);
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      padding: 0;
+      align-items: center;
+      #see-more-button {
+        display: block;
+      }
+      #offices {
+        flex-direction: column;
+      }
+      p {
+        display: none;
+      }
+      &.see-more {
+        p {
+          display: block;
         }
       }
     }
