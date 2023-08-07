@@ -39,7 +39,6 @@
       #about-us {
         text-align: center;
         padding-top: 3rem;
-        margin-bottom: 4rem;
 
         h2 {
           margin: 0 15%;
@@ -155,13 +154,80 @@
       }
 
       hr {
-        margin-bottom: 4rem;
+        margin: 4rem 0;
         background-color: var(--accent-color);
         height: 2px;
         border: none;
+        @media screen and (max-width: 400px) {
+          margin: 2rem 0;
+        }
       }
       /* === OUR WORK === */
       #our-work {
+        .card-container-mobile {
+          display: none;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 2rem 1fr 1fr;
+          grid-template-areas:
+            'header header'
+            'tile1 tile2'
+            'tile3 tile4';
+          gap: 5px;
+          h2 {
+            text-align: center;
+            grid-area: header;
+            font-size: 2rem;
+          }
+          .work-tile {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--dark-font);
+            transition: all 0.5s ease-in-out;
+            border-radius: 3px;
+            h3 {
+              display: none;
+              background-color: var(--nav-background);
+              color: var(--dark-font);
+              padding: 0.3rem 0.6rem;
+              font-size: 1.3rem;
+              border-radius: 3px;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              white-space: nowrap;
+              z-index: 98;
+            }
+            img {
+              transition: inherit;
+              opacity: 1;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+              h3 {
+                display: block;
+              }
+              img {
+                opacity: 0.5;
+                transform: scale(1.1);
+              }
+            }
+            &:nth-child(2) {
+              grid-area: tile1;
+            }
+            &:nth-child(3) {
+              grid-area: tile2;
+            }
+            &:nth-child(4) {
+              grid-area: tile3;
+            }
+            &:nth-child(5) {
+              grid-area: tile4;
+            }
+          }
+        }
         .card-container {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -240,6 +306,14 @@
                 margin-bottom: 2rem;
               }
             }
+          }
+        }
+        @media screen and (max-width: 400px) {
+          .card-container {
+            display: none;
+          }
+          .card-container-mobile {
+            display: grid;
           }
         }
         .see-more {
