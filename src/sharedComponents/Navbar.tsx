@@ -13,8 +13,9 @@ const Navbar: React.FC = () => {
   const [navTextColor, setNavTextColor] = useState('var(--light-font)');
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   useEffect(() => {
+    console.log('hey');
     const handleScroll = () => {
-      //only change colors if hamburger is closed, otherwise it will overwrite the ham menu styles
+      //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles
       if (!hamburgerOpen) {
         if (window.scrollY > 30) {
           //set nav to white with dark font
@@ -68,7 +69,6 @@ const Navbar: React.FC = () => {
     }
     setHamburgerOpen(!hamburgerOpen);
   };
-
   return (
     <div id='app'>
       <header>
@@ -91,7 +91,8 @@ const Navbar: React.FC = () => {
                 <Link to='/contact-us'>contact us</Link>
               </li>
             </ul>
-            <div id='hamburger-container' onClick={hamburgerClick}>
+            <div id='hamburger-icon-container' onClick={hamburgerClick}>
+              {/* this is the hamburger icon only  */}
               <div
                 style={{ backgroundColor: navTextColor }}
                 className={
@@ -100,19 +101,26 @@ const Navbar: React.FC = () => {
                     : 'hamburger flatHamburger'
                 }
               ></div>
-              <div id='hamburger-menu' className={hamburgerOpen ? 'open' : ''}>
-                <ul>
-                  <li>
-                    <Link to='/'>about us</Link>
-                  </li>
-                  <li>
-                    <Link to='/our-work'>our work</Link>
-                  </li>
-                  <li>
-                    <Link to='/contact-us'>contact us</Link>
-                  </li>
-                </ul>
-              </div>
+              {/* this is the menu that opens when you click the hamburger icon */}
+            </div>
+            <div
+              id='hamburger-menu'
+              className={hamburgerOpen ? 'open' : ''}
+              style={{ backgroundColor: navBackgroundColor }}
+            >
+              <ul>
+                <li>
+                  <Link to='/'>about us</Link>
+                </li>
+                {'\u25CF'}
+                <li>
+                  <Link to='/our-work'>our work</Link>
+                </li>
+                {'\u25CF'}
+                <li>
+                  <Link to='/contact-us'>contact us</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </nav>
