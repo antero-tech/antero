@@ -30,11 +30,9 @@ const OurWork: FC<OurWorkProps> = ({ workData }) => {
         <h2>Our Work</h2>
         {workCards}
       </div>
-      <span>
-        <Link to='/our-work' className={'see-more'}>
-          more work
-        </Link>
-      </span>
+      <Link to='/our-work' className={'see-more'}>
+        see more work -{'>'}
+      </Link>
     </div>
   );
 };
