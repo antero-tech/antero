@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
-
+import { v4 as uuidv4 } from 'uuid';
 // Particles imports
 import Particles from 'react-particles';
 import { Engine } from 'tsparticles-engine';
