@@ -14,6 +14,8 @@ const Navbar: React.FC = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
 
+  // attempt to change Antero to logo 
+  const [displayLogo, setDisplayLogo] = useState()
   useEffect(() => {
     const handleScroll = () => {
       //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles

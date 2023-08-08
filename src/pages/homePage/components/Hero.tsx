@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import logo from '../../../assets/logo-placeholder.png';
+import logo from '../../../assets/antero-logo.svg';
 
 const Hero: FC = () => {
   return (

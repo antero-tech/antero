@@ -74,6 +74,14 @@ img {
         color: inherit;
         margin: 0 1rem;
       }
+      img {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      a {
+        display: none;
+      }
     }
 
     #links {
