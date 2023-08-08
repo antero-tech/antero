@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
-
+import logo from '../assets/antero-logo-small-light.svg';
 // Particles imports
 import Particles from 'react-particles';
 import { Engine } from 'tsparticles-engine';
@@ -14,8 +14,12 @@ const Navbar: React.FC = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
 
-  // attempt to change Antero to logo 
-  const [displayLogo, setDisplayLogo] = useState()
+ /* 
+ * TODO: 
+ * Change logo from light to dark on scrolly > 30
+ * Mobile only - see media query in index.scss line 81 
+ */
+
   useEffect(() => {
     const handleScroll = () => {
       //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles
@@ -81,7 +85,10 @@ const Navbar: React.FC = () => {
         >
           <div className='contents'>
             <div id='logo-container'>
-              <Link to='/'>Antero</Link>
+              <Link to='/'>
+                <img src={logo}></img>
+                Antero 
+              </Link>
             </div>
             <ul id='links'>
               <li>
