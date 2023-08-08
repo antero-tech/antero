@@ -1,18 +1,21 @@
 #contact-page {
-  // background-color: var(--page-background);
   width: 100%;
   margin-top: 100px;
-  // background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   header {
-    // background-color: blue;
     flex: 0;
     width: 100%;
+    white-space: nowrap;
     h1 {
       color: var(--light-font);
       font-size: 7rem;
+    }
+    @media screen and (max-width: 400px) {
+      h1 {
+        font-size: 4rem;
+      }
     }
   }
 
@@ -47,6 +50,12 @@
           border-right: 2px solid var(--accent-color);
           margin-right: 2rem;
         }
+        #horizontal-line {
+          display: none;
+          border: none;
+          border-bottom: 2px solid var(--accent-color);
+          margin-bottom: 2rem;
+        }
         #contact-form {
           width: 50%;
           display: flex;
@@ -78,6 +87,35 @@
           }
           button {
             font-size: 1.8rem;
+          }
+        }
+      }
+      @media screen and (max-width: 400px) {
+        #contact {
+          flex-direction: column;
+          #contact-blurb {
+            width: 100%;
+            padding: 1rem 0;
+            h2 {
+              display: none;
+            }
+          }
+          #verticle-line {
+            display: none;
+          }
+          #horizontal-line {
+            display: block;
+          }
+          #contact-form {
+            width: 100%;
+            margin-bottom: 3rem;
+            .form-group {
+              flex-direction: column;
+              span,
+              input {
+                width: 100%;
+              }
+            }
           }
         }
       }
