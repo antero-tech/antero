@@ -24,9 +24,7 @@ const Footer = () => {
           </div>
           <button
             className='see-more-button'
-            onClick={() => {
-              setShowDetails(!showDetails);
-            }}
+            onClick={() => setShowDetails(!showDetails)}
           >
             {showDetails ? '\u25BC' : '\u25B2'}
           </button>
@@ -57,7 +55,6 @@ const Footer = () => {
             )}
           </div>
         </div>
-
         <div className='info'>
           <div id='company-contact'>
             <h4>Antero</h4>
