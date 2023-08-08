@@ -317,6 +317,7 @@
           }
         }
         .see-more {
+          font-family: var(--copy-font);
           text-decoration: none;
           color: var(--accent-color);
           font-size: 3rem;
@@ -324,6 +325,9 @@
           margin-right: 2rem;
           margin-bottom: 1rem;
           transition: color 0.5s ease-in-out;
+          span {
+            font-size: 1rem;
+          }
           &:hover {
             color: var(--dark-accent);
           }
@@ -337,42 +341,43 @@
   }
   /* === CONTACT === */
   #contact {
-    // background-color: var(--dark-font);
-    // background-color: var(--accent-color);
-    padding-top: 3rem;
-    color: var(--dark-font);
     .contents {
-      // margin: 0 auto;
+      color: var(--light-font);
+      margin: 0 auto;
       display: flex;
       justify-content: center;
+      padding: 4rem 1rem;
+      font-size: 4rem;
+      white-space: nowrap;
       a {
-        top: 1rem;
-        position: relative;
         font-size: 2rem;
-        padding: 1rem;
-        // background-color: pink;
-        background-color: white;
         color: inherit;
         text-decoration: none;
-        transition: all 0.3s ease-in-out;
-        p {
-          transition: inherit;
-          display: flex;
-          align-items: center;
-          span {
-            transition: inherit;
-            font-size: 1.5rem;
-            margin-left: 0.5rem;
-          }
+        display: flex;
+        align-items: center;
+        margin-top: 4.5rem;
+        margin-left: 24rem;
+        position: absolute;
+        transition: color 0.3s ease-in-out;
+        span {
+          margin-left: 0.5rem;
+          font-size: 1.5rem;
         }
-        &:hover {
-          p {
-            margin-left: 1rem;
-            span {
-              color: var(--accent-color);
-            }
+        &:hover,
+        &:active {
+          color: var(--accent-color);
+        }
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 2rem;
+        padding: 2rem 1rem;
+        a {
+          font-size: 1rem;
+          margin-top: 2.5rem;
+          margin-left: 8rem;
+          span {
+            font-size: 0.75rem;
           }
-          top: 0;
         }
       }
     }

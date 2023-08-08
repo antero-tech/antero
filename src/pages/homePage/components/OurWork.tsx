@@ -52,7 +52,7 @@ const OurWork: FC<OurWorkProps> = ({ workData }) => {
         {workCards}
       </div>
       <Link to='/our-work' className={'see-more'}>
-        see more work -{'>'}
+        see more <span>{'\u25B6'}</span>
       </Link>
     </div>
   );

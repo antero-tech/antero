@@ -4,12 +4,9 @@ const Contact: React.FC = () => {
   return (
     <div id='contact'>
       <div className='contents'>
+        <p>Let's work together.</p>
         <Link to='/contact-us'>
-          Can we help with your next project? <br />
-          <p>
-            Contact us
-            <span>{'\u25B6'}</span>
-          </p>
+          Contact us <span>{'\u25B6'}</span>
         </Link>
       </div>
     </div>
