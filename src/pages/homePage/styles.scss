@@ -324,9 +324,12 @@
           margin-right: 2rem;
           margin-bottom: 1rem;
           transition: color 0.5s ease-in-out;
-
           &:hover {
             color: var(--dark-accent);
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
           }
         }
       }
