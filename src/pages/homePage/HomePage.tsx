@@ -15,9 +15,9 @@ const HomePage: FC = () => {
           <AboutUs />
           <hr />
           <OurWork workData={workData} />
-          <Contact />
         </div>
       </div>
+      <Contact />
     </main>
   );
 };

@@ -44,6 +44,7 @@ const ContactForm: React.FC = () => {
         </p>
       </div>
       <div id='verticle-line'></div>
+      <hr id='horizontal-line' />
       <form id='contact-form' onSubmit={handleSubmit}>
         <div className='form-group'>
           <span>
