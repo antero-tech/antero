@@ -29,9 +29,8 @@ const OurWork: FC<OurWorkProps> = ({ workData }) => {
   const workTiles = [];
   for (let i = 0; i < 4; i++) {
     workTiles.push(
-      <Link to='/our-work'>
+      <Link to='/our-work' key={uuidv4()}>
         <WorkTile
-          key={uuidv4()}
           title={workData[i].title}
           imgSrc={workData[i].imgSrc}
           imgAlt={workData[i].imgAlt}
