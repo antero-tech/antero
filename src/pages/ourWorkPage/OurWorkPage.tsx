@@ -1,6 +1,7 @@
 import OurWorkPageHero from './components/OurWorkPageHero';
 import WorkCard from './components/WorkCard';
 import './styles.scss';
+import { v4 as uuidv4 } from 'uuid';
 
 interface OurWorkPageProps {
   workData: {
@@ -14,7 +15,7 @@ interface OurWorkPageProps {
 const OurWorkPage: React.FC<OurWorkPageProps> = ({ workData }) => {
   const workCards = workData.map((work) => (
     <WorkCard
-      key={work.title}
+      key={uuidv4()}
       title={work.title}
       description={work.description}
       imgSrc={work.imgSrc}

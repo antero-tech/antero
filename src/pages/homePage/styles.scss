@@ -35,10 +35,10 @@
     align-items: center;
     .contents {
       /* === ABOUT US === */
+
       #about-us {
         text-align: center;
         padding-top: 3rem;
-        margin-bottom: 4rem;
 
         h2 {
           margin: 0 15%;
@@ -154,13 +154,80 @@
       }
 
       hr {
-        margin-bottom: 4rem;
+        margin: 4rem 0;
         background-color: var(--accent-color);
         height: 2px;
         border: none;
+        @media screen and (max-width: 400px) {
+          margin: 2rem 0;
+        }
       }
       /* === OUR WORK === */
       #our-work {
+        .card-container-mobile {
+          display: none;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 2rem 1fr 1fr;
+          grid-template-areas:
+            'header header'
+            'tile1 tile2'
+            'tile3 tile4';
+          gap: 5px;
+          h2 {
+            text-align: center;
+            grid-area: header;
+            font-size: 2rem;
+          }
+          .work-tile {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--dark-font);
+            transition: all 0.5s ease-in-out;
+            border-radius: 3px;
+            h3 {
+              display: none;
+              background-color: var(--nav-background);
+              color: var(--dark-font);
+              padding: 0.3rem 0.6rem;
+              font-size: 1.3rem;
+              border-radius: 3px;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              white-space: nowrap;
+              z-index: 98;
+            }
+            img {
+              transition: inherit;
+              opacity: 1;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+              h3 {
+                display: block;
+              }
+              img {
+                opacity: 0.5;
+                transform: scale(1.1);
+              }
+            }
+            &:nth-child(2) {
+              grid-area: tile1;
+            }
+            &:nth-child(3) {
+              grid-area: tile2;
+            }
+            &:nth-child(4) {
+              grid-area: tile3;
+            }
+            &:nth-child(5) {
+              grid-area: tile4;
+            }
+          }
+        }
         .card-container {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -241,7 +308,16 @@
             }
           }
         }
+        @media screen and (max-width: 400px) {
+          .card-container {
+            display: none;
+          }
+          .card-container-mobile {
+            display: grid;
+          }
+        }
         .see-more {
+          font-family: var(--copy-font);
           text-decoration: none;
           color: var(--accent-color);
           font-size: 3rem;
@@ -249,9 +325,15 @@
           margin-right: 2rem;
           margin-bottom: 1rem;
           transition: color 0.5s ease-in-out;
-
+          span {
+            font-size: 1rem;
+          }
           &:hover {
             color: var(--dark-accent);
+          }
+          @media screen and (max-width: 400px) {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
           }
         }
       }
@@ -259,42 +341,43 @@
   }
   /* === CONTACT === */
   #contact {
-    // background-color: var(--dark-font);
-    // background-color: var(--accent-color);
-    padding-top: 3rem;
-    color: var(--dark-font);
     .contents {
-      // margin: 0 auto;
+      color: var(--light-font);
+      margin: 0 auto;
       display: flex;
       justify-content: center;
+      padding: 4rem 1rem;
+      font-size: 4rem;
+      white-space: nowrap;
       a {
-        top: 1rem;
-        position: relative;
         font-size: 2rem;
-        padding: 1rem;
-        // background-color: pink;
-        background-color: white;
         color: inherit;
         text-decoration: none;
-        transition: all 0.3s ease-in-out;
-        p {
-          transition: inherit;
-          display: flex;
-          align-items: center;
-          span {
-            transition: inherit;
-            font-size: 1.5rem;
-            margin-left: 0.5rem;
-          }
+        display: flex;
+        align-items: center;
+        margin-top: 4.5rem;
+        margin-left: 24rem;
+        position: absolute;
+        transition: color 0.3s ease-in-out;
+        span {
+          margin-left: 0.5rem;
+          font-size: 1.5rem;
         }
-        &:hover {
-          p {
-            margin-left: 1rem;
-            span {
-              color: var(--accent-color);
-            }
+        &:hover,
+        &:active {
+          color: var(--accent-color);
+        }
+      }
+      @media screen and (max-width: 400px) {
+        font-size: 2rem;
+        padding: 2rem 1rem;
+        a {
+          font-size: 1rem;
+          margin-top: 2.5rem;
+          margin-left: 8rem;
+          span {
+            font-size: 0.75rem;
           }
-          top: 0;
         }
       }
     }
