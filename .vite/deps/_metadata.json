@@ -1,35 +1,35 @@
 {
-  "hash": "fb3bee2c",
-  "browserHash": "045a100c",
+  "hash": "875b0cff",
+  "browserHash": "904e130b",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "e279ce3c",
+      "fileHash": "7887eb0b",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "9ad4c268",
+      "fileHash": "e2ccc7b0",
       "needsInterop": true
     },
     "@tanstack/router": {
       "src": "../../node_modules/@tanstack/router/build/esm/index.js",
       "file": "@tanstack_router.js",
-      "fileHash": "6bdd02c5",
+      "fileHash": "638b3a07",
       "needsInterop": false
     },
     "react-particles": {
       "src": "../../node_modules/react-particles/esm/index.js",
       "file": "react-particles.js",
-      "fileHash": "f592c2f9",
+      "fileHash": "eff212c7",
       "needsInterop": false
     },
     "tsparticles-preset-fire": {
       "src": "../../node_modules/tsparticles-preset-fire/esm/index.js",
       "file": "tsparticles-preset-fire.js",
-      "fileHash": "bc831c9c",
+      "fileHash": "0f5aef67",
       "needsInterop": false
     }
   },
