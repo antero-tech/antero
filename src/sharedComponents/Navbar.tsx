@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
-import logo from '../assets/antero-logo-small-light.svg';
+import logo from '../assets/antero-logo.svg';
 // Particles imports
 import Particles from 'react-particles';
 import { Engine } from 'tsparticles-engine';
