@@ -4,7 +4,7 @@ import logo from '../../../assets/antero-logo.svg';
 const Hero: FC = () => {
   return (
     <div id='hero' className='heros'>
-      <img src={logo} alt='NS' />
+      <img src={logo} alt='Antero' />
       <div id='hero-text'>
         <h1>
           Brutally Simple

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const [navTextColor, setNavTextColor] = useState('var(--light-font)');
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('');
-
+  const [logoColor, setLogoColor] = useState('red')
  /* 
  * TODO: 
  * Change logo from light to dark on scrolly > 30
@@ -85,9 +85,13 @@ const Navbar: React.FC = () => {
         >
           <div className='contents'>
             <div id='logo-container'>
-              <Link to='/'>
-                <img src={logo}></img>
-                Antero 
+              <Link to='/'>  
+                <svg viewBox="0 -0.0000034999999911633495 495 389.000007">
+                  <g transform="matrix(1.6184427561 0 0 1.8901943786 247.5419778268 194.6044111496)" id="lySATFc2GEsTrH03mi08A"  >
+                    <path style={{stroke: 'rgb(0,0,0)', strokeWidth: '1', strokeDasharray: 'none', strokeLinecap: 'butt', strokeDashoffset: '0', strokeLinejoin: 'miter', strokeMiterlimit: '4', fill: navTextColor, fillRule: 'nonzero', opacity: '1'}} vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -152.64178 102.69019 L 0 -102.69018 L 152.64178 102.69019 L -65.41789999999997 102.69019 L -40.239869999999975 59.57379 L 65.41791000000003 65.34831 L 0.000010000000031595846 -41.38404 L -87.22385999999997 102.69019 z" stroke-linecap="round" />
+                  </g>
+                </svg>
+                <p>Antero</p> 
               </Link>
             </div>
             <ul id='links'>
