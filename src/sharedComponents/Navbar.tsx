@@ -3,7 +3,7 @@ import { Outlet, Link } from '@tanstack/router';
 import Footer from './Footer';
 
 // Particles imports
-import Particles from 'react-particles';
+import Particles from 'react-tsparticles';
 import { Engine } from 'tsparticles-engine';
 import { loadFirePreset } from 'tsparticles-preset-fire';
 
