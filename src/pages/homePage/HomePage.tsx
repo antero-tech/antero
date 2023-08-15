@@ -3,7 +3,7 @@ import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import Hero from './components/Hero';
 import OurWork from './components/OurWork';
-import workData from '../../assets/work-cards-data.json';
+import workData from '../../assets/work-cards-data';
 import './styles.scss';
 
 const HomePage: FC = () => {

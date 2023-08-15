@@ -5,7 +5,7 @@ import './styles/index.scss';
 import HomePage from './pages/homePage/HomePage';
 import ContactPage from './pages/contactPage/ContactPage';
 import OurWorkPage from './pages/ourWorkPage/OurWorkPage';
-import workData from './assets/work-cards-data.json';
+import workData from './assets/work-cards-data.ts';
 import Navbar from './sharedComponents/Navbar';
 import { RouterProvider, Router, Route, RootRoute } from '@tanstack/router';
 
