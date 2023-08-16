@@ -65,9 +65,16 @@
           .detail {
             display: flex;
             align-items: center;
-            img {
-              padding: 1rem;
+            .copy-img {
+              overflow: hidden;
               width: 30%;
+              aspect-ratio: 1;
+              border-radius: 15px;
+              box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
+              img {
+                object-fit: cover;
+                aspect-ratio: 1;
+              }
             }
             .copy {
               padding: 2rem;
