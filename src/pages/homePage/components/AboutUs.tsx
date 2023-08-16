@@ -1,5 +1,8 @@
 import { FC } from 'react';
 import AboutDetail from './AboutDetail';
+import scalable from '../../../assets/scalable-solutions.jpg';
+import user from '../../../assets/about-the-user.jpg';
+import service from '../../../assets/service-priotity.jpg';
 
 const aboutUsDetails = [
   {
@@ -9,8 +12,8 @@ const aboutUsDetails = [
     subheading2: "Prepare for growth..",
     copy2:
       'Our flexible architecture ensures seamless scalability to handle increasing traffic, expanding content, and evolving user demands. We will future-proof your online presence and empower you to meet your business goals. Experience the freedom to dream big!',
-    imgSrc: 'https://picsum.photos/400/400',
-    imgAlt: 'technology',
+    imgSrc: scalable,
+    imgAlt: 'Scalable',
   },
   {
     heading: "It's About the User",
@@ -19,8 +22,8 @@ const aboutUsDetails = [
     subheading2: 'Stand Out in the Crowd..',
     copy2:
       'By incorporating the latest UX trends and best practices, we create a harmonious blend of aesthetics and functionality that keeps users coming back for more. With our meticulous attention to detail and dedication to creating exceptional UX, we empower your brand to stand out in a crowded digital landscape. Trust us to design an unforgettable user experience that leaves a lasting impression on your visitors.',
-    imgSrc: 'https://picsum.photos/401/401',
-    imgAlt: 'technology',
+    imgSrc: user,
+    imgAlt: 'User Experience',
   },
   {
     heading: 'Service is Our Top Priority',
@@ -29,8 +32,8 @@ const aboutUsDetails = [
     subheading2: "Delivered On Time..",
     copy2:
       'Our dedicated team works closely with yours, providing regular updates, gathering feedback, and addressing any concerns promptly. With our strong commitment to timely delivery, we meticulously plan and manage our development process to meet agreed-upon deadlines. Trust us to not only deliver exceptional applications but also maintain clear communication channels to keep you informed and involved every step of the way.',
-    imgSrc: 'https://picsum.photos/402/402',
-    imgAlt: 'technology',
+    imgSrc: service,
+    imgAlt: 'Service',
   },
 ];
 
@@ -40,7 +43,6 @@ const AboutUs: FC = () => {
       key={detail.heading}
       alignDirection={index % 2 === 0 ? 'left' : 'right'}
       heading={detail.heading}
-      subheading1={detail.subheading1}
       copy1={detail.copy1}
       subheading2={detail.subheading2}
       copy2={detail.copy2}
