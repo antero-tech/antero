@@ -68,6 +68,7 @@
             .copy-img {
               overflow: hidden;
               width: 30%;
+              min-width: 300px;
               aspect-ratio: 1;
               border-radius: 15px;
               box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px;
@@ -78,7 +79,6 @@
             }
             .copy {
               padding: 2rem;
-              padding-right: 6rem;
               width: 70%;
               text-align: justify;
               font-size: 1.2rem;
@@ -109,9 +109,26 @@
           }
           .reverse-flex {
             flex-direction: row-reverse;
-            .copy {
-              padding: 2rem;
-              padding-left: 6rem;
+          }
+        }
+        @media screen and (max-width: 900px) {
+          #details-container {
+            .detail {
+              flex-direction: column;
+              .copy {
+                width: 100%;
+                h3 {
+                  margin: 0;
+                  text-align: center;
+                  &::after {
+                    width: 0;
+                  }
+                }
+                .phone {
+                  display: none;
+                }
+              }
+
             }
           }
         }
@@ -265,7 +282,7 @@
             align-items: center;
             .card-img {
               width: 100%;
-              height: 600px;
+              aspect-ratio: 1;
               overflow: hidden;
               border-radius: 20px;
               margin-bottom: 1rem;
