@@ -1,7 +1,6 @@
 import { FC } from 'react';
 interface DetailProps {
   heading: string;
-  subheading1: string;
   copy1: string;
   subheading2: string;
   copy2: string;
@@ -12,7 +11,6 @@ interface DetailProps {
 
 const AboutDetail: FC<DetailProps> = ({
   heading,
-  subheading1,
   copy1,
   subheading2,
   copy2,
@@ -29,7 +27,7 @@ const AboutDetail: FC<DetailProps> = ({
       </div>
       <div className='copy'>
         <h3>{heading}</h3>
-        <h5>{subheading1}</h5>
+      
         <p>{copy1}</p>
         <h5 className='phone'>{subheading2}</h5>
         <p className='phone'>{copy2}</p>

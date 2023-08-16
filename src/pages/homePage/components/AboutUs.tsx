@@ -43,7 +43,6 @@ const AboutUs: FC = () => {
       key={detail.heading}
       alignDirection={index % 2 === 0 ? 'left' : 'right'}
       heading={detail.heading}
-      subheading1={detail.subheading1}
       copy1={detail.copy1}
       subheading2={detail.subheading2}
       copy2={detail.copy2}
