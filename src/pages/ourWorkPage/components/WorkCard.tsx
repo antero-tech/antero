@@ -25,6 +25,7 @@ const WorkCard: React.FC<WorkCardProps> = ({
           src={imgSrc}
           alt={imgAlt}
           className={isHovered ? 'img-hovered' : ''}
+          style={{ backgroundColor: 'grey' }}
         />
       </div>
       <div className='card-text'>

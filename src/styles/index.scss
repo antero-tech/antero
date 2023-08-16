@@ -31,6 +31,7 @@ img {
   max-width: 1280px;
   width: 100%;
   padding: 0 3rem;
+  overflow: hidden;
   @media screen and (max-width: 400px) {
     padding: 0 1.5rem;
   }
@@ -73,10 +74,32 @@ img {
     #logo-container {
       font-size: 2rem;
       z-index: 100;
+      margin: 0;
+      display: flex;
+      align-items: center;
       a {
         text-decoration: none;
         color: inherit;
-        margin: 0 1rem;
+        display: flex;
+        align-items: center;
+        svg {
+          display: none;
+          width: 50px;
+        }
+        p {
+          // background-color: orange;
+        }
+      }
+
+      @media screen and (max-width: 400px) {
+        a {
+          svg {
+            display: block;
+          }
+          p {
+            display: none;
+          }
+        }
       }
     }
 
