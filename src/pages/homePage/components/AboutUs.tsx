@@ -6,10 +6,10 @@ import service from '../../../assets/service-priotity.jpg';
 
 const aboutUsDetails = [
   {
-    heading: 'Scalable Solutions',    
+    heading: 'Scalable Solutions',
     copy1:
       'Say goodbye to limitations and hello to limitless possibilities. Our scalable solutions grow and adapt with your business. Whether you need a simple landing page or a complex e-commerce platform',
-    subheading2: "Prepare for growth..",
+    subheading2: 'Prepare for growth..',
     copy2:
       'Our flexible architecture ensures seamless scalability to handle increasing traffic, expanding content, and evolving user demands. We will future-proof your online presence and empower you to meet your business goals. Experience the freedom to dream big!',
     imgSrc: scalable,
@@ -29,7 +29,7 @@ const aboutUsDetails = [
     heading: 'Service is Our Top Priority',
     copy1:
       'We believe that effective communication and meeting deadlines are crucial elements of successful application development. We prioritize open and transparent communication with you throughout the entire process, ensuring that your vision is understood and incorporated into every aspect of the development journey.',
-    subheading2: "Delivered On Time..",
+    subheading2: 'Delivered On Time..',
     copy2:
       'Our dedicated team works closely with yours, providing regular updates, gathering feedback, and addressing any concerns promptly. With our strong commitment to timely delivery, we meticulously plan and manage our development process to meet agreed-upon deadlines. Trust us to not only deliver exceptional applications but also maintain clear communication channels to keep you informed and involved every step of the way.',
     imgSrc: service,

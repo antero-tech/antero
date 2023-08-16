@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
    * TODO:
    * Mobile only - see media query in index.scss line 81
    */
-   
+
   useEffect(() => {
     const handleScroll = () => {
       //only change colors if hamburger menu is closed, otherwise it will overwrite the ham menu styles

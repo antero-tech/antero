@@ -3,7 +3,6 @@
     "enable": false
   },
   "particles": {
-    
     "number": {
       "value": 80,
       "density": {
