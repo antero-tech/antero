@@ -148,9 +148,10 @@
             padding-top: 0;
             .detail {
               flex-direction: column;
-              img {
-                padding: 0;
-                width: 60%;
+              .copy-img {
+                img {
+                  padding: 0;
+                }
               }
               .copy {
                 padding: 0;
